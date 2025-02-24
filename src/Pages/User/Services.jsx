@@ -108,7 +108,7 @@ const Services = () => {
                       imgSrc={
                         product.productImg
                           ? product.productImg
-                          : "./src/Images/test.png"
+                          : "/Images/test.png"
                       }
                     >
                       <Link

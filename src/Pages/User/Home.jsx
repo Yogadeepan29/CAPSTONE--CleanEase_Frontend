@@ -19,11 +19,11 @@ const Home = () => {
 
       <div className="lg:hidden h-56 sm:h-64 xl:h-80 2xl:h-96 mb-5  ">
       <Carousel pauseOnHover>
-        <img src="/src/Images/Banner/Banner-1.svg" alt="..."  className="w-full h-full object-cover"  />
-        <img src="/src/Images/Banner/Banner-2.svg" alt="..."  className="w-full h-full object-cover"  />
-        <img src="/src/Images/Banner/Banner-4.svg" alt="..."  className="w-full h-full object-cover"  />
-        <img src="/src/Images/Banner/Banner-5.svg" alt="..."  className="w-full h-full object-cover"  />
-        <img src="/src/Images/Banner/Banner-6.svg" alt="..."  className="w-full h-full object-cover"  />
+        <img src="/Images/Banner/Banner-1.svg" alt="..."  className="w-full h-full object-cover"  />
+        <img src="/Images/Banner/Banner-2.svg" alt="..."  className="w-full h-full object-cover"  />
+        <img src="/Images/Banner/Banner-4.svg" alt="..."  className="w-full h-full object-cover"  />
+        <img src="/Images/Banner/Banner-5.svg" alt="..."  className="w-full h-full object-cover"  />
+        <img src="/Images/Banner/Banner-6.svg" alt="..."  className="w-full h-full object-cover"  />
       </Carousel>
     </div>
 
@@ -52,7 +52,7 @@ const Home = () => {
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex ">
             <img
-              src="/src/Images/hero.png"
+              src="/Images/hero.png"
               alt="hero"
             />
           </div>
@@ -120,8 +120,8 @@ const Home = () => {
       <p>We use eco-friendly cleaning products and state-of-the-art equipment to ensure a healthy and safe environment for you and your family. Our cleaners are thoroughly vetted and trained to provide exceptional service and attention to detail.</p>
     </div>
     <div className="grid grid-cols-2 gap-4 mt-8">
-      <img className="w-full rounded-lg" src="/src/Images/content1.jpg" alt="cleaning content 1" />
-      <img className="mt-4 w-full lg:mt-10 rounded-lg" src="/src/Images/content2.jpg" alt="cleaning content 2" />
+      <img className="w-full rounded-lg" src="/Images/content1.jpg" alt="cleaning content 1" />
+      <img className="mt-4 w-full lg:mt-10 rounded-lg" src="/Images/content2.jpg" alt="cleaning content 2" />
     </div>
   </div>
 </section>
@@ -136,7 +136,7 @@ const Home = () => {
         <p className="text-2xl font-medium text-gray-900 dark:text-white">"I've been using CleanEase for months now and I'm consistently impressed with their professionalism and attention to detail. Highly recommend!"</p>
       </blockquote>
       <figcaption className="flex items-center justify-center mt-6 space-x-3">
-        <img className="w-6 h-6 rounded-full" src="/src/Images/PrasathProfile.jpg" alt="profile picture" />
+        <img className="w-6 h-6 rounded-full" src="/Images/PrasathProfile.jpg" alt="profile picture" />
         <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
           <div className="pr-3 font-medium text-gray-900 dark:text-white">Prasath S</div>
           <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">Loyal Customer</div>
