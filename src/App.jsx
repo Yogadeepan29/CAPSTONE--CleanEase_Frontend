@@ -56,7 +56,7 @@ const App = () => {
               <Route path="/checkout" element={<CheckoutAddress />} />
               <Route path="/checkout/slot" element={<CheckoutSlot />} />
               <Route path="/order/success" element={<Success />} />
-              <Route path="/cancel" element={<Cancel />} />
+              <Route path="/order/cancel" element={<Cancel />} />
               <Route path="/orders" element={<Order />} />
               <Route
                 path="/services/:category/:productName"
