@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Filter from "../../Components/Filter";
-import { Badge, Button, HR, Rating } from "flowbite-react";
+import { Badge, Button, HR, Rating, Spinner } from "flowbite-react";
 import { HiShoppingCart } from "react-icons/hi";
 import axios from "axios";
 import { Card } from "flowbite-react";
@@ -11,30 +11,45 @@ import API_BASE_URL from "../../apiConfig";
 
 const Services = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [loadingMessage, setLoadingMessage] = useState("Please wait...");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [token, setToken] = useState(null);
-  //
   const cartItems = useSelector((state) => state.cart.items);
-  //
 
   useEffect(() => {
     const storedToken = localStorage.getItem("Token");
     setToken(storedToken);
     dispatch(clearCheckoutData());
+    setLoading(true);
 
-    axios
-      .get(`${API_BASE_URL}/services`)
-      .then((response) => {
+    // Timer to change loading message after 5 seconds
+    const messageTimer = setTimeout(() => {
+      setLoadingMessage(
+        "Due to inactivity on our page, data retrieval may be slower. We apologize for the inconvenience."
+      );
+    }, 5000);
+
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${API_BASE_URL}/services`);
         setData(response.data);
         console.log(response.data);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error(error);
-      });
-  }, []);
+      } finally {
+        setLoading(false);
+        clearTimeout(messageTimer);
+      }
+    };
+
+    fetchData();
+
+    return () => clearTimeout(messageTimer);
+  }, [dispatch]);
 
   const handleCategoryChange = (categories) => {
     setSelectedCategories(categories);
@@ -75,11 +90,11 @@ const Services = () => {
       console.error("Error adding to cart:", error);
     }
   };
-  //
+
   const isProductInCart = (productId) => {
     return cartItems.some((item) => item.productId === productId);
   };
-  //
+
   return (
     <div className="min-h-screen">
       <div className="md:flex md:flex-row justify-center">
@@ -92,14 +107,36 @@ const Services = () => {
           />
         </div>
         <div className="md:w-8/10 container p-4 relative top-20 md:top-0">
-          {filteredData.length > 0 ? (
+          {loading ? (
+            <div className="flex justify-center items-center h-full">
+              <div className="flex flex-wrap gap-2">
+                <div className="text-center mb-20">
+                  <Spinner
+                    size="xl"
+                    aria-label="Center-aligned spinner example"
+                    className="mr-2"
+                  />
+                  <p className="mt-4 font-normal dark:text-slate-300 text-black">
+                    {loadingMessage.split(". ").map((line, index) => (
+                      <span key={index}>
+                        {line}
+                        {index < loadingMessage.split(". ").length - 1 && (
+                          <br />
+                        )}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ) : filteredData.length > 0 ? (
             filteredData.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-14">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold my-10">
                   {category.category}
                 </h1>
 
-                <div className="grid grid-cols-1  sm:grid-cols-2  md:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4 gap-3 sm:ms-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4 gap-3 sm:ms-10">
                   {category.products.map((product, productIndex) => (
                     <Card
                       key={productIndex}
@@ -136,7 +173,7 @@ const Services = () => {
                             </>
                           )}
                           {(product.rating === 0 || product.reviews === 0) && (
-                            <div className="text-sm font-meduim text-gray-900 dark:text-white">
+                            <div className="text-sm font-medium text-gray-900 dark:text-white">
                               No reviews
                             </div>
                           )}
@@ -155,19 +192,19 @@ const Services = () => {
                         <div className="flex flex-col h-full py-2 ">
                           <p>
                             {" "}
-                            <span className="font-semibold  text-gray-900 dark:text-white">
+                            <span className="font-semibold text-gray-900 dark:text-white">
                               Duration:
                             </span>{" "}
-                            <span className=" text-gray-900 dark:text-white">
+                            <span className="text-gray-900 dark:text-white">
                               {product.duration}
                             </span>
                           </p>
                           <p>
                             {" "}
-                            <span className="font-semibold  text-gray-900 dark:text-white">
+                            <span className="font-semibold text-gray-900 dark:text-white">
                               Ideal for:
                             </span>{" "}
-                            <span className=" text-gray-900 dark:text-white">
+                            <span className="text-gray-900 dark:text-white">
                               {product.idealFor}
                             </span>
                           </p>
@@ -204,7 +241,7 @@ const Services = () => {
                             <svg
                               className="h-4 w-4 text-gray-500 dark:text-gray-400"
                               aria-hidden="true"
-                              xmlns="http://www.w3.org /2000/svg"
+                              xmlns="http://www.w3.org/2000/svg"
                               width={24}
                               height={24}
                               fill="none"
@@ -215,7 +252,7 @@ const Services = () => {
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 strokeWidth={2}
-                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+                                d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73 -2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
                               />
                             </svg>
                             <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -243,8 +280,8 @@ const Services = () => {
               </div>
             ))
           ) : (
-            <div className="h-screen text-4xl pb-20  flex justify-center items-center">
-              <h1 className="pb-20 mb-20">Oops😓,No Services Found </h1>
+            <div className="h-screen text-4xl pb-20 flex justify-center items-center">
+              <h1 className="pb-20 mb-20">Oops😓, No Services Found</h1>
             </div>
           )}
         </div>
@@ -252,5 +289,4 @@ const Services = () => {
     </div>
   );
 };
-
 export default Services;

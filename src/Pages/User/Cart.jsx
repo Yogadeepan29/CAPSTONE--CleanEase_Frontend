@@ -7,6 +7,7 @@ import {
   Checkbox,
   Label,
   Radio,
+  Spinner,
 } from "flowbite-react";
 import { HiTrash } from "react-icons/hi";
 import { FaShoppingBag } from "react-icons/fa";
@@ -27,6 +28,7 @@ const Cart = () => {
   const [token, setToken] = useState(null);
   const [productDetails, setProductDetails] = useState({});
   const [selectedAddons, setSelectedAddons] = useState({});
+  const [loading, setLoading] = useState(true); 
   const subscriptionItems = cartItems.filter((item) => item.subscription);
   const oneTimeServiceItems = cartItems.filter((item) => !item.subscription);
   const [checkoutCategory, setCheckoutCategory] = useState("oneTime");
@@ -55,6 +57,7 @@ const Cart = () => {
 
   // Fetch cart items from the server
   const fetchCartItems = async (token) => {
+    setLoading(true);
     try {
       const response = await axios.get(`${API_BASE_URL}/cart`, {
         headers: {
@@ -64,9 +67,10 @@ const Cart = () => {
       const cartData = response.data.cart;
       dispatch(setCartItems(cartData));
       fetchAllProductDetails(cartData);
-      console.log("cart items :", cartData);
     } catch (error) {
       console.error("Error fetching cart items:", error);
+    } finally {
+      setLoading(false); // Set loading to false after fetching
     }
   };
 
@@ -355,7 +359,16 @@ const Cart = () => {
             Shopping Cart{" "}
             {cartItems.length > 0 ? `: (${cartItems.length})` : ""}
           </h2>
-          {cartItems.length === 0 ? (
+          {loading ? ( // Loading state
+            <div className="flex justify-center items-center h-full">
+           <div className="text-center">
+                     <Spinner size="xl" aria-label="Center-aligned spinner example" />
+                     <p className="mt-4 font-normal dark:text-slate-300 text-black">
+                       Please wait
+                     </p>
+                   </div>
+            </div>
+          ) : cartItems.length === 0 ? (
             <div className=" flex-col mt-20 text-4xl justify-center items-center text-center text-gray-600 dark:text-gray-400">
               <img className="max-w-96 mx-auto" src="/Empty.svg" />
               Your cart is empty

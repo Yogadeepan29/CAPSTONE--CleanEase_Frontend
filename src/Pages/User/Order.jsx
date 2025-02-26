@@ -9,6 +9,7 @@ import {
   Modal,
   Textarea,
   Badge,
+  Spinner,
 } from "flowbite-react";
 import { clearNewOrder } from "../../Redux/Slice/orderSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,28 +27,31 @@ const Order = () => {
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
   const [feedback, setFeedback] = useState("");
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const { currentuser } = useSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(clearNewOrder());
     const fetchOrders = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(`${API_BASE_URL}/order/orders`, {
           headers: {
             token: localStorage.getItem("Token"),
           },
         });
-        console.log("API Response:", response.data);
         setOrders(response.data);
       } catch (error) {
         console.error("Error fetching orders:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchOrders();
-    // Set up polling to fetch orders every 30 seconds
-    const intervalId = setInterval(fetchOrders, 30000); // 30 seconds
+    // Set up polling to fetch orders every 45 seconds
+    const intervalId = setInterval(fetchOrders, 45000); 
 
     // Cleanup function to clear the interval on component unmount
     return () => clearInterval(intervalId);
@@ -235,7 +239,16 @@ const Order = () => {
       <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
         Your Orders
       </h1>
-      {orders.length > 0 && (
+      {loading ? ( // Loading state
+        <div className="flex justify-center items-center h-full">
+          <div className="text-center">
+            <Spinner size="xl" aria-label="Center-aligned spinner example" />
+            <p className="mt-4 font-normal dark:text-slate-300 text-black">
+              Please wait while we fetch your orders...
+            </p>
+          </div>
+        </div>
+      ) : (
         <>
           <div className="flex justify-end mr-5 mb-5 md:hidden">
             <Dropdown label={activeTab} inline>
@@ -253,7 +266,7 @@ const Order = () => {
               ))}
             </Dropdown>
           </div>
-          <div className="hidden md:flex justify-center mb-4 items-center ">
+          <div className="hidden md:flex justify-center mb-4 items-center">
             {[
               "All",
               "Subscription",
@@ -274,277 +287,285 @@ const Order = () => {
               </Button>
             ))}
           </div>
-        </>
-      )}
-      {Array.isArray(filteredOrders()) && filteredOrders().length > 0 ? (
-        <div className="grid gap-6">
-          {filteredOrders().map((order) => (
-            <Card
-              key={order.sessionId}
-              className="border  border-gray-300 dark:border-gray-700 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex justify-between items-center p-4 border-b  border-gray-200 dark:border-gray-600">
-                <div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    <span className="font-semibold text-black dark:text-white">
-                      Placed on :
-                    </span>{" "}
-                    <span className="inline-block">
-                      {format(new Date(order.createdAt), "dd-MM-yyyy")}
-                    </span>
-                  </p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    <span className="text-xs sm:text-sm font-semibold text-black dark:text-white">
-                      Service Type :
-                    </span>{" "}
-                    <span className="inline-block text-xs sm:text-sm">
-                      {order.subscription
-                        ? " Monthly Subscription"
-                        : "Single Service"}
-                    </span>
-                  </p>
-                  {order.subscription && (
-                    <Badge
-                      className=" mt-2 text-xs sm:text-sm text-center flex justify-center items-center rounded-lg"
-                      color="info"
-                    >
-                      Subscription
-                    </Badge>
-                  )}
-                </div>
-                <div className="text-center">
-                  <p className="text-xs sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
-                    Order No : #{order.orderNo}
-                  </p>
-                  <a
-                    href={order.receiptUrl}
-                    target="_blank"
-                    className="text-blue-600 hover:underline dark:text-blue-400 text-xs sm:text-sm whitespace-nowrap"
-                  >
-                    View Receipt
-                  </a>
-                </div>
-              </div>
-              <div className="p-4">
-                <h4 className="text-md font-medium mt-2 text-gray-800 dark:text-gray-200">
-                  Ordered Services :{" "}
-                  <span className="text-sm text-gray-600 dark:text-gray-400">
-                    {order.items.length}{" "}
-                  </span>
-                </h4>
-                {order.items.map((item, index) => {
-                  const serviceDateTime =
-                    item.subscription && item.lastServiceDate
-                      ? combineDateAndTime(
-                          item.lastServiceDate,
-                          item.serviceTime
-                        )
-                      : combineDateAndTime(item.serviceDate, item.serviceTime);
-                  const currentTime = new Date();
-                  const twoHoursLater = new Date(
-                    serviceDateTime.getTime() + 2 * 60 * 60 * 1000
-                  );
-                  let slotLabel = "Slot : ";
-                  if (item.subscription) {
-                    if (
-                      currentTime >= serviceDateTime &&
-                      currentTime <= twoHoursLater
-                    ) {
-                      slotLabel = "Current Slot : ";
-                    } else {
-                      slotLabel = "Next Slot : ";
-                    }
-                  }
-                  return (
-                    <div
-                      key={index}
-                      className="flex items-center justify-between border-b border-gray-200 dark:border-gray-600 py-2"
-                    >
-                      <div className="flex items-center ">
-                        <Link to={`/services/${item.category}/${item.name}`}>
-                          <img
-                            src={item.productImg}
-                            alt={item.name}
-                            className="w-20 h-20 object-cover rounded-lg shadow hidden sm:inline"
-                          />
-                        </Link>
-                        <div className="ml-4">
-                          <Link to={`/services/${item.category}/${item.name}`}>
-                            <h2 className="font-semibold text-green-500 dark:text-green-400 ">
-                              {item.name}
-                            </h2>
-                          </Link>
-
-                          {item.addons.length > 0 && (
-                            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2">
-                              <span className="font-semibold text-black dark:text-white ">
-                                {" "}
-                                Addons :{" "}
-                              </span>
-
-                              {item.addons
-                                .map((addon) => addon.name)
-                                .join(", ")}
-                            </p>
-                          )}
-                          <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 items-center mt-2">
-                            <span className="font-semibold text-black dark:text-white mr-1 ">
-                              Service Address :
-                            </span>
-                            <span className="p-1">
-                              {getFullAddress(item.serviceAddressId)}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <p className=" font-semibold text-gray-800 dark:text-gray-200">
-                          ₹{item.price}
-                        </p>
-                        <p className="text-xs sm:text-sm dark:text-gray-400">
-                          <span className="font-semibold text-black whitespace-nowrap dark:text-white mr-1">
-                            Status :
-                          </span>
-                          <span
-                            className={`inline-block font-medium  ${
-                              item.status === "Completed"
-                                ? "text-green-500"
-                                : item.status === "On process"
-                                ? "text-orange-400"
-                                : item.status === "upcoming"
-                                ? "text-yellow-500 dark:text-yellow-300"
-                                : "text-gray-500"
-                            }`}
-                          >
-                            {item.status}
-                          </span>
-                        </p>
-                        <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1 ">
-                          <span className="font-semibold text-black dark:text-white  ">
-                            {slotLabel}
-                          </span>
-                          <span className="inline-block font-medium ">
-                            {" "}
-                            {convertDate(item.serviceDate)}
-                          </span>{" "}
-                          at{" "}
-                          <span className="block font-medium">
-                            {item.serviceTime}
-                          </span>
-                        </p>
-
-                        {new Date() >
-                          new Date(
-                            serviceDateTime.getTime() + 2 * 60 * 60 * 1000
-                          ) &&
-                          !item.reviewed && (
-                            <Button
-                              color="gray"
-                              pill
-                              className="mt-2 w-full mb-2 hidden sm:flex "
-                              size="sm"
-                              onClick={() => handleRateClick(item)}
-                            >
-                              <span className="text-yellow-500 dark:text-yellow-300">
-                                {item.subscription && item.lastServiceDate
-                                  ? "Rate last service"
-                                  : "Rate this service"}
-                              </span>
-                            </Button>
-                          )}
-                        {new Date() >
-                          new Date(
-                            serviceDateTime.getTime() + 2 * 60 * 60 * 1000
-                          ) &&
-                          !item.reviewed && (
-                            <Button
-                              color="gray"
-                              pill
-                              className="mt-2 w-full mb-2 sm:hidden "
-                              size="xs"
-                              onClick={() => handleRateClick(item)}
-                            >
-                              <span className="text-yellow-500 dark:text-yellow-300">
-                                {item.subscription && item.lastServiceDate
-                                  ? "Rate last service"
-                                  : "Rate this service"}
-                              </span>
-                            </Button>
-                          )}
-
-                        {item.reviewed && (
-                          <p className="text-green-500 text-xs sm:text-sm font-semibold mt-2">
-                            Thank's for your feedback!
-                          </p>
-                        )}
-                        {item.status === "upcoming" &&
-                          (() => {
-                            const serviceDateTime = combineDateAndTime(
+          <div className="grid gap-6">
+            {filteredOrders().length > 0 ? ( // Check if there are filtered orders
+              filteredOrders().map((order) => (
+                <Card
+                  key={order.sessionId}
+                  className="border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-600">
+                    <div>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <span className="font-semibold text-black dark:text-white">
+                          Placed on:
+                        </span>{" "}
+                        <span className="inline-block">
+                          {format(new Date(order.createdAt), "dd-MM-yyyy")}
+                        </span>
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <span className="text-xs sm:text-sm font-semibold text-black dark:text-white">
+                          Service Type:
+                        </span>{" "}
+                        <span className="inline-block text-xs sm:text-sm">
+                          {order.subscription
+                            ? "Monthly Subscription"
+                            : "Single Service"}
+                        </span>
+                      </p>
+                      {order.subscription && (
+                        <Badge
+                          className="mt-2 text-xs sm:text-sm text-center flex justify-center items-center rounded-lg"
+                          color="info"
+                        >
+                          Subscription
+                        </Badge>
+                      )}
+                    </div>
+                    <div className="text-center">
+                      <p className="text-xs sm:text-lg font-semibold text-gray-800 dark:text-gray-200">
+                        Order No: #{order.orderNo}
+                      </p>
+                      <a
+                        href={order.receiptUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:underline dark:text-blue-400 text-xs sm:text-sm whitespace-nowrap"
+                      >
+                        View Receipt
+                      </a>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h4 className="text-md font-medium mt-2 text-gray-800 dark:text-gray-200">
+                      Ordered Services:{" "}
+                      <span className="text-sm text-gray-600 dark:text-gray-400">
+                        {order.items.length}
+                      </span>
+                    </h4>
+                    {order.items.map((item, index) => {
+                      const serviceDateTime =
+                        item.subscription && item.lastServiceDate
+                          ? combineDateAndTime(
+                              item.lastServiceDate,
+                              item.serviceTime
+                            )
+                          : combineDateAndTime(
                               item.serviceDate,
                               item.serviceTime
                             );
-                            const currentTime = new Date();
-                            const twoHoursBeforeService = new Date(
-                              serviceDateTime.getTime() - 2 * 60 * 60 * 1000
-                            );
-
-                            if (currentTime < twoHoursBeforeService) {
-                              return (
-                                <span
-                                  className="cursor-pointer flex items-center mt-10 text-center justify-center text-sm font-semibold"
-                                  onClick={() =>
-                                    handleReminderClick(item, order._id)
-                                  }
-                                >
-                                  <FaBell
-                                    className={`mr-1 ${
-                                      item.reminder
-                                        ? "text-yellow-400"
-                                        : "text-gray-500"
-                                    }`}
-                                  />
-                                  <span
-                                    className={`text-xs sm:text-sm ${
-                                      item.reminder
-                                        ? "text-yellow-500"
-                                        : "text-red-400"
-                                    }`}
-                                  >
-                                    {item.reminder
-                                      ? " turn off Reminder"
-                                      : "Remind me"}
+                      const currentTime = new Date();
+                      const twoHoursLater = new Date(
+                        serviceDateTime.getTime() + 2 * 60 * 60 * 1000
+                      );
+                      let slotLabel = "Slot: ";
+                      if (item.subscription) {
+                        slotLabel =
+                          currentTime >= serviceDateTime &&
+                          currentTime <= twoHoursLater
+                            ? "Current Slot: "
+                            : "Next Slot: ";
+                      }
+                      return (
+                        <div
+                          key={index}
+                          className="flex items-center justify-between border-b border-gray-200 dark:border-gray-600 py-2"
+                        >
+                          <div className="flex items-center">
+                            <Link
+                              to={`/services/${item.category}/${item.name}`}
+                            >
+                              <img
+                                src={item.productImg}
+                                alt={item.name}
+                                className="w-20 h-20 object-cover rounded-lg shadow hidden sm:inline"
+                              />
+                            </Link>
+                            <div className="ml-4">
+                              <Link
+                                to={`/services/${item.category}/${item.name}`}
+                              >
+                                <h2 className="font-semibold text-green-500 dark:text-green-400">
+                                  {item.name}
+                                </h2>
+                              </Link>
+                              {item.addons.length > 0 && (
+                                <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2">
+                                  <span className="font-semibold text-black dark:text-white">
+                                    {" "}
+                                    Addons:{" "}
                                   </span>
+                                  {item.addons
+                                    .map((addon) => addon.name)
+                                    .join(", ")}
+                                </p>
+                              )}
+                              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 items-center mt-2">
+                                <span className="font-semibold text-black dark:text-white mr-1">
+                                  Service Address:
                                 </span>
-                              );
-                            }
-                            return null;
-                          })()}
-                      </div>
+                                <span className="p-1">
+                                  {getFullAddress(item.serviceAddressId)}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <p className="font-semibold text-gray-800 dark:text-gray-200">
+                              ₹{item.price}
+                            </p>
+                            <p className="text-xs sm:text-sm dark:text-gray-400">
+                              <span className="font-semibold text-black whitespace-nowrap dark:text-white mr-1">
+                                Status:
+                              </span>
+                              <span
+                                className={`inline-block font-medium ${
+                                  item.status === "Completed"
+                                    ? "text-green-500"
+                                    : item.status === "On process"
+                                    ? "text-orange-400"
+                                    : item.status === "upcoming"
+                                    ? "text-yellow-500 dark:text-yellow-300"
+                                    : "text-gray-500"
+                                }`}
+                              >
+                                {item.status}
+                              </span>
+                            </p>
+                            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">
+                              <span className="font-semibold text-black dark:text-white">
+                                {slotLabel}
+                              </span>
+                              <span className="inline-block font-medium">
+                                {convertDate(item.serviceDate)}
+                              </span>{" "}
+                              at{" "}
+                              <span className="block font-medium">
+                                {item.serviceTime}
+                              </span>
+                            </p>
+
+                            {new Date() >
+                              new Date(
+                                serviceDateTime.getTime() + 2 * 60 * 60 * 1000
+                              ) &&
+                              !item.reviewed && (
+                                <Button
+                                  color="gray"
+                                  pill
+                                  className="mt-2 w-full mb-2 hidden sm:flex"
+                                  size="sm"
+                                  onClick={() => handleRateClick(item)}
+                                >
+                                  <span className="text-yellow-500 dark:text-yellow-300">
+                                    {item.subscription && item.lastServiceDate
+                                      ? "Rate last service"
+                                      : "Rate this service"}
+                                  </span>
+                                </Button>
+                              )}
+                            {new Date() >
+                              new Date(
+                                serviceDateTime.getTime() + 2 * 60 * 60 * 1000
+                              ) &&
+                              !item.reviewed && (
+                                <Button
+                                  color="gray"
+                                  pill
+                                  className="mt-2 w-full mb-2 sm:hidden"
+                                  size="xs"
+                                  onClick={() => handleRateClick(item)}
+                                >
+                                  <span className="text-yellow-500 dark:text-yellow-300">
+                                    {item.subscription && item.lastServiceDate
+                                      ? "Rate last service"
+                                      : "Rate this service"}
+                                  </span>
+                                </Button>
+                              )}
+
+                            {item.reviewed && (
+                              <p className="text-green-500 text-xs sm:text-sm font-semibold mt-2">
+                                Thank you for your feedback!
+                              </p>
+                            )}
+                            {item.status === "upcoming" &&
+                              (() => {
+                                const serviceDateTime = combineDateAndTime(
+                                  item.serviceDate,
+                                  item.serviceTime
+                                );
+                                const currentTime = new Date();
+                                const twoHoursBeforeService = new Date(
+                                  serviceDateTime.getTime() - 2 * 60 * 60 * 1000
+                                );
+
+                                if (currentTime < twoHoursBeforeService) {
+                                  return (
+                                    <span
+                                      className="cursor-pointer flex items-center mt-10 text-center justify-center text-sm font-semibold"
+                                      onClick={() =>
+                                        handleReminderClick(item, order._id)
+                                      }
+                                    >
+                                      <FaBell
+                                        className={`mr-1 ${
+                                          item.reminder
+                                            ? "text-yellow-400"
+                                            : "text-gray-500"
+                                        }`}
+                                      />
+                                      <span
+                                        className={`text-xs sm:text-sm ${
+                                          item.reminder
+                                            ? "text-yellow-500"
+                                            : "text-red-400"
+                                        }`}
+                                      >
+                                        {item.reminder
+                                          ? "Turn off Reminder"
+                                          : "Remind me"}
+                                      </span>
+                                    </span>
+                                  );
+                                }
+                                return null;
+                              })()}
+                          </div>
+                        </div>
+                      );
+                    })}
+                    <div className="mt-4 text-end">
+                      <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                        Amount Paid: ₹{order.totalAmount}
+                      </p>
                     </div>
-                  );
-                })}
-                <div className="mt-4 text-end">
-                  <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-                    Amount Paid : ₹{order.totalAmount}
-                  </p>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-      ) : (
-        <>
-          <img className="max-w-96 mx-auto" src="/clean.svg" />
-          <p className="text-gray-500 text-center mt-10">No orders found.</p>
+                  </div>
+                </Card>
+              ))
+            ) : (
+              <>
+                <img
+                  className="max-w-96 mx-auto"
+                  src="/clean.svg"
+                  alt="No orders"
+                />
+                <p className="text-gray-500 text-center mt-10">
+                  No orders found.
+                </p>
+              </>
+            )}
+          </div>
         </>
       )}
       <Modal show={modalOpen} onClose={() => setModalOpen(false)}>
-        <Modal.Header>Rate Your Service : </Modal.Header>
+        <Modal.Header>Rate Your Service:</Modal.Header>
         <Modal.Body>
           <div className="flex flex-col">
             <div className="mb-4">
               <span className="font-semibold dark:text-white">
-                Rating : ( {selectedItem?.name} )
+                Rating: ({selectedItem?.name})
               </span>
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -560,8 +581,8 @@ const Order = () => {
                       className="hidden"
                     />
                     <span
-                      onMouseEnter={() => setHoveredRating(star)} // Set hovered rating on mouse enter
-                      onMouseLeave={() => setHoveredRating(0)} // Reset hovered rating on mouse leave
+                      onMouseEnter={() => setHoveredRating(star)} 
+                      onMouseLeave={() => setHoveredRating(0)} 
                       className={`text-3xl transition-colors duration-200 ${
                         star <= (hoveredRating || rating)
                           ? "text-yellow-500"
@@ -590,7 +611,7 @@ const Order = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <div className="flex  ml-auto gap-2">
+          <div className="flex ml-auto gap-2">
             <Button onClick={handleSubmitRating}>Submit</Button>
             <Button color="gray" onClick={() => setModalOpen(false)}>
               Cancel

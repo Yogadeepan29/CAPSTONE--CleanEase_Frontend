@@ -9,16 +9,12 @@ import {
   HR,
   Label,
   Spinner,
-  Avatar,
-  Pagination,
 } from "flowbite-react";
 import { GiVacuumCleaner } from "react-icons/gi";
 import { HiShoppingCart } from "react-icons/hi";
-import { FaShoppingBag, FaArrowRight, FaAngleRight } from "react-icons/fa";
+import { FaShoppingBag, FaArrowRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, setCheckoutData } from "../../Redux/Slice/cartSlice";
-import { FaAngleLeft } from "react-icons/fa";
-import { format } from "date-fns";
 import CustomerReviews from "../../Components/CustomerReviews";
 import API_BASE_URL from "../../apiConfig";
 
@@ -42,15 +38,11 @@ const ServiceDetails = () => {
       .get(`${API_BASE_URL}/services/${category}/${productName}`)
       .then((response) => {
         setProduct(response.data);
-        console.log(response.data);
         // Fetch reviews for the product
-        return axios.get(
-         `${API_BASE_URL}/review/${response.data._id}`
-        );
+        return axios.get(`${API_BASE_URL}/review/${response.data._id}`);
       })
       .then((response) => {
         setReviews(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -79,7 +71,7 @@ const ServiceDetails = () => {
         (key) => selectedAddons[key]._id
       );
       const response = await axios.post(
-     `${API_BASE_URL}/cart/add`,
+        `${API_BASE_URL}/cart/add`,
         {
           productId: product._id,
           category: product.category,
@@ -167,8 +159,13 @@ const ServiceDetails = () => {
   if (!product || !product.features) {
     return (
       <>
-        <div className="text-center">
-          <Spinner aria-label="Center-aligned spinner example" />
+        <div className="flex justify-center items-center h-screen">
+          <div className="text-center mb-20">
+            <Spinner size="xl" aria-label="Center-aligned spinner example" />
+            <p className="mt-4 font-normal dark:text-slate-300 text-black">
+              Please wait
+            </p>
+          </div>
         </div>
       </>
     );
