@@ -203,7 +203,7 @@ const DashboardAddress = () => {
 
   return (
     <div className="mx-auto p-4 w-full">
-      <h1 className="my-7 text-center font-semibold text-4xl">
+      <h1 className="my-7 text-center font-semibold text-4xl text-blue-600 dark:text-blue-500 ">
         Saved Addresses
       </h1>
 

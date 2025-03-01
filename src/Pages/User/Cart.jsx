@@ -355,7 +355,7 @@ const Cart = () => {
     <>
       <section className="py-8 min-h-screen antialiased dark:bg-gray-900 md:py-16">
         <div className="mx-auto top-20 max-w-screen-xl p-4 2xl:px-0">
-          <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
+          <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-500  sm:text-2xl">
             Shopping Cart{" "}
             {cartItems.length > 0 ? `: (${cartItems.length})` : ""}
           </h2>

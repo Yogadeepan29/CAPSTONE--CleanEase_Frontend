@@ -222,10 +222,10 @@ const Filter = ({
         </div>
       </Navbar>
 
-      <aside className=" hidden  h-full md:flex justify-end bg-gray-50 dark:bg-gray-800  ">
+      <aside className=" hidden  h-full md:flex justify-end pt-10 bg-gray-100 dark:bg-gray-800  ">
         <Sidebar>
-          <Sidebar.Logo className="flex justify-center pt-10">
-            Filters
+          <Sidebar.Logo className="flex  justify-center py-2 bg-slate-200 dark:bg-gray-700 rounded-3xl items-center w-full ">
+           <span className="text-yellow-500 dark:text-yellow-400 tracking-widest mr-2">FILTERS</span>
           </Sidebar.Logo>
           <Sidebar.Items>
             <Sidebar.ItemGroup>
@@ -241,7 +241,7 @@ const Filter = ({
               </form>
 
               <Sidebar.Collapse
-                className="font-semibold space-y-5"
+                className="font-semibold py-5 text-blue-600 dark:text-blue-500 tracking-widest "
                 label="CATEGORIES"
                 open={true}
               >
@@ -268,7 +268,7 @@ const Filter = ({
               </Sidebar.Collapse>
 
               <Sidebar.Collapse
-                className="font-semibold space-y-5"
+                className="font-semibold py-5 text-blue-600 dark:text-blue-500 tracking-widest "
                 label="DURATION"
                 open={true}
               >
@@ -288,7 +288,7 @@ const Filter = ({
               </Sidebar.Collapse>
 
               <Sidebar.Collapse
-                className="font-semibold space-y-5"
+                className="font-semibold py-5 text-blue-600 dark:text-blue-500 tracking-widest "
                 label="PRICES"
                 open={true}
               >

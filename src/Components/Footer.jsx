@@ -12,7 +12,7 @@ import {
 // Footer component
 const FooterComp = () => {
   return (
-    <Footer container className="border-t-2 ">
+    <Footer container className="border-t-2 bg-slate-200 ">
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           
@@ -30,7 +30,7 @@ const FooterComp = () => {
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             {/* Technologies Links */}
             <div>
-              <Footer.Title title="Technologies" />
+              <Footer.Title title="Technologies" className="text-blue-800 dark:text-blue-500 font-bold"/>
               <Footer.LinkGroup col>
                 <Footer.Link href="https://react.dev/" target="blank">
                   React
@@ -51,7 +51,7 @@ const FooterComp = () => {
             </div>
             {/* Follow Us Links */}
             <div>
-              <Footer.Title title="Follow us" />
+              <Footer.Title title="Follow us" className="text-blue-800 dark:text-blue-500 font-bold" />
               <Footer.LinkGroup col>
                 <Footer.Link
                   href="https://github.com/Yogadeepan29"
@@ -65,7 +65,7 @@ const FooterComp = () => {
             </div>
             {/* Legal Links */}
             <div>
-              <Footer.Title title="Legal" />
+              <Footer.Title title="Legal" className="text-blue-800 dark:text-blue-500 font-bold"/>
               <Footer.LinkGroup col>
                 <Footer.Link href="#">Privacy Policy</Footer.Link>
                 <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>

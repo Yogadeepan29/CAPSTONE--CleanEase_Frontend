@@ -19,41 +19,52 @@ const Signup = () => {
 
   const formik = useFormik({
     initialValues: {
-      username: '',
-      email: '',
-      password: '',
+      username: "",
+      email: "",
+      password: "",
     },
     validationSchema: Yup.object({
-      username: Yup.string().required('Enter a valid username'),
-      email: Yup.string().email('Invalid email address').required('Please enter a valid email'),
-      password: Yup.string().required('* Required'),
+      username: Yup.string().required("Enter a valid username"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Please enter a valid email"),
+      password: Yup.string().required("* Required"),
     }),
     onSubmit: async (values) => {
-    try {
-      setLoading(true);
-      setErrorMessage(null);
-      const response = await axios.post(
-      `${API_BASE_URL}/auth/register-user`,
-        values,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
+      try {
+        setLoading(true);
+        setErrorMessage(null);
+        const response = await axios.post(
+          `${API_BASE_URL}/auth/register-user`,
+          values,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = response.data;
+        if (data.success === false) {
+          return setErrorMessage(data.message);
         }
-      );
-      const data = response.data;
-      if (data.success === false) {
-        return setErrorMessage(data.message);
+        if (response.status === 200) {
+          navigate("/signin");
+        }
+      } catch (error) {
+        // Check if the error response has a message
+        if (
+          error.response &&
+          error.response.data &&
+          error.response.data.message
+        ) {
+          setErrorMessage(error.response.data.message);
+        } else {
+          setErrorMessage("An unexpected error occurred.");
+        }
+        setLoading(false);
       }
-      if (response.status === 200) {
-        navigate("/signin");
-      }
-    } catch (error) {
-      setErrorMessage(error.message);
-      setLoading(false);
-    }
-  },
-});
+    },
+  });
 
   useEffect(() => {
     if (errorMessage) {
@@ -80,14 +91,14 @@ const Signup = () => {
           </p>
         </div>
         <div className="flex-1">
-        <form className="flex flex-col gap-4" onSubmit={formik.handleSubmit}>
+          <form className="flex flex-col gap-4" onSubmit={formik.handleSubmit}>
             <div>
               <Label value="UserName" />
               <TextInput
                 type="text"
                 placeholder="Enter Your Username"
                 id="username"
-               onChange={formik.handleChange}
+                onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.username}
               />
@@ -101,7 +112,7 @@ const Signup = () => {
                 type="email"
                 placeholder="email@address.com"
                 id="email"
-                onChange={formik .handleChange}
+                onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
               />

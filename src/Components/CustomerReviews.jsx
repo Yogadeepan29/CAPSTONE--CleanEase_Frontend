@@ -29,9 +29,9 @@ const CustomerReviews = ({
   );
 
   return (
-    <div className="border rounded-3xl p-4 max-w-full mx-auto mt-10 overflow-auto">
+    <div className="border rounded-3xl p-4 max-w-full mx-auto mt-10 overflow-auto bg-slate-50 dark:bg-gray-900 ">
       <div className="flex justify-between items-center">
-        <h2 className="text-xl sm:text-2xl font-bold">Customer Reviews</h2>
+        <h2 className="text-xl sm:text-2xl font-bold text-yellow-400 mx-auto dark:text-yellow-200 tracking-widest">Customer Reviews</h2>
         {currentReviews.length > 0 && (
           <Dropdown label={sortOption} inline>
             <Dropdown.Item onClick={() => setSortOption("Recent")}>

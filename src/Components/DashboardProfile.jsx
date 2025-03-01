@@ -179,7 +179,7 @@ const DashboardProfile = () => {
 
   return (
     <div className="max-w-lg mx-auto p-4 w-full">
-      <h1 className="my-7 text-center font-semibold text-4xl">Profile</h1>
+      <h1 className="my-7 text-center font-semibold text-4xl text-blue-600 dark:text-blue-500 ">Profile</h1>
       <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
         <input
           type="file"

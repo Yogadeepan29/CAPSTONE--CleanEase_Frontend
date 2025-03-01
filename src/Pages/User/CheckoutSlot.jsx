@@ -1,19 +1,16 @@
-import { Breadcrumb, Button, Card, HR, Checkbox, Label } from "flowbite-react";
+import { Breadcrumb, Button, Card, HR, } from "flowbite-react";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FaLocationDot } from "react-icons/fa6";
-import { HiOutlineArrowRight } from "react-icons/hi";
 import { updateServiceDateTime } from "../../Redux/Slice/cartSlice";
 import { RiCalendarScheduleFill } from "react-icons/ri";
 import {
   format,
   addDays,
-  isToday,
   isAfter,
   isBefore,
   isSameDay,
-  isSameHour,
   setHours,
   setMinutes,
 } from "date-fns";
@@ -74,7 +71,6 @@ const CheckoutSlot = () => {
   const generateAvailableDates = () => {
     const today = new Date();
     const availableDates = [];
-    console.log(today);
 
     // Define the cutoff time (2:30 PM)
     const cutoffTime = setHours(setMinutes(new Date(), 30), 14); // 2:30 PM
@@ -184,7 +180,6 @@ const CheckoutSlot = () => {
     setAllSlotsSelected(allSelected);
   }, [selectedSlots, checkoutData.items]);
 
-  console.log("Checkout Data:", checkoutData);
 
   const handleCheckout = () => {
     navigate("/checkout/summary");
@@ -194,7 +189,7 @@ const CheckoutSlot = () => {
     <>
       <section className=" mx-auto container min-h-screen antialiased dark:bg-gray-900 ">
         <div className="mx-auto top-20 max-w-screen-xl p-4 2xl:px-0 mt-10 sm:mt-5">
-          <h2 className="text-3xl md:text-5xl text-center font-semibold text-gray-900 dark:text-white ">
+          <h2 className="text-3xl md:text-5xl text-center font-semibold text-blue-600 dark:text-blue-500 ">
             Checkout{" "}
           </h2>
           <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
@@ -227,7 +222,7 @@ const CheckoutSlot = () => {
               </Breadcrumb>
 
               <Card className="mt-4 border border-gray-700 bg-gray-50 dark:border-gray-400 dark:bg-gray-800">
-                <div className="text-center font-bold text-2xl md:text-3xl ">
+                <div className="text-center font-bold text-2xl md:text-3xl tracking-wider text-yellow-500 dark:text-yellow-400">
                   <h1>Schedule Service</h1>
                 </div>
                 {checkoutData.items.map((item) => {

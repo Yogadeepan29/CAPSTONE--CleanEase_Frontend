@@ -268,7 +268,7 @@ const Header = () => {
 
   return (
     <div className="pt-16 sm:pt-20">
-      <Navbar className="fixed top-0 left-0 right-0 z-30 md:border-b-2 flex flex-wrap md:flex-nowrap min-w-[290px] ">
+      <Navbar className="fixed top-0 left-0 right-0 z-30 md:border-b-2 flex flex-wrap md:flex-nowrap min-w-[290px] bg-slate-200">
         <div className="flex flex-shrink-0">
           <Button
             className="w-10 h-10 md:hidden inline-flex justify-center items-center"
@@ -383,7 +383,7 @@ const Header = () => {
               }
             >
               <Dropdown.Header>
-                <span className="block text-sm font-bold">
+                <span className="block text-sm font-bold tracking-wider text-green-600 dark:text-green-400">
                   Hi, {currentuser.rest.username.toUpperCase()}
                 </span>
               </Dropdown.Header>

@@ -1,5 +1,5 @@
 import { Breadcrumb, Button, Card, HR, Checkbox, Label } from "flowbite-react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { HiOutlineArrowRight } from "react-icons/hi";
@@ -22,7 +22,6 @@ const CheckoutSummary = () => {
     checkoutData.items[0].subscription
   );
 
-  console.log(checkoutData);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -66,86 +65,6 @@ const CheckoutSummary = () => {
   };
 
 
-  // const handlePayment = async () => {
-  //   try {
-  //     const hasSubscription = checkoutData.items.some(
-  //       (item) => item.subscription
-  //     );
-  //     let response;
-  
-  //     // Prepare the items with the selected address
-  //     const itemsWithAddress = checkoutData.items.map((item) => {
-  //       const selectedAddress = currentuser.rest.addresses.find(
-  //         (address) => address._id === item.selectedAddressId
-  //       );
-  
-  //       return {
-  //         productDetail: checkoutData.productDetails[item.productId],
-  //         subtotal: item.subtotal,
-  //         subscription: item.subscription,
-  //         addons: item.addons,
-  //         date: item.date,
-  //         time: item.time,
-  //         selectedAddressId: item.selectedAddressId,
-  //         selectedAddress: selectedAddress, // Add the full address object
-  //       };
-  //     });
-  
-  //     if (hasSubscription) {
-  //       response = await fetch(
-  //         "http://localhost:5000/api/payment/create-checkout-session-for-subscription",
-  //         {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //             token: localStorage.getItem("Token"),
-  //           },
-  //           body: JSON.stringify({
-  //             items: itemsWithAddress,
-  //             source: checkoutData.source,
-  //             totalPrice: checkoutData.totalPrice,
-  //           }),
-  //         }
-  //       );
-  //     } else {
-  //       response = await fetch(
-  //         "http://localhost:5000/api/payment/create-checkout-session",
-  //         {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //             token: localStorage.getItem("Token"),
-  //           },
-  //           body: JSON.stringify({
-  //             items: itemsWithAddress,
-  //             source: checkoutData.source,
-  //             totalPrice: checkoutData.totalPrice,
-  //           }),
-  //         }
-  //       );
-  //     }
-  
-  //     if (!response.ok) {
-  //       throw new Error("Network response was not ok");
-  //     }
-  
-  //     const data = await response.json();
-  
-  //     if (data.id) {
-  //       const stripe = await stripePromise;
-  //       const result = await stripe.redirectToCheckout({ sessionId: data.id });
-  
-  //       if (result.error) {
-  //         alert(result.error.message);
-  //       }
-  //     } else {
-  //       alert("Payment failed: " + data.error);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error during payment processing:", error);
-  //     alert("An error occurred: " + error.message);
-  //   }
-  // };
 
   const handlePayment = async () => {
     try {
@@ -212,7 +131,7 @@ const CheckoutSummary = () => {
     <>
       <section className=" mx-auto container min-h-screen antialiased dark:bg-gray-900 ">
         <div className="mx-auto top-20 max-w-screen-xl p-4 2xl:px-0 mt-10 sm:mt-5">
-          <h2 className="text-3xl md:text-5xl text-center font-semibold text-gray-900 dark:text-white ">
+          <h2 className="text-3xl md:text-5xl text-center font-semibold text-blue-600 dark:text-blue-500  ">
             Checkout{" "}
           </h2>
           <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
@@ -260,7 +179,7 @@ const CheckoutSummary = () => {
               </Breadcrumb>
 
               <Card className="mt-4 border border-gray-700 bg-gray-50 dark:border-gray-400 dark:bg-gray-800 rounded-3xl">
-                <div className="text-center font-semibold text-2xl md:text-3xl ">
+                <div className="text-center font-semibold text-2xl md:text-3xl text-yellow-500 dark:text-yellow-400 tracking-wider">
                   <h1>Review Services and Details</h1>
                 </div>
                 {checkoutData.items.map((item) => {
@@ -364,7 +283,7 @@ const CheckoutSummary = () => {
               </Card>
 
               <Card className="mt-4 border border-gray-700 bg-gray-50 dark:border-gray-400 dark:bg-gray-800">
-                <div className="text-center font-bold text-2xl md:text-3xl ">
+                <div className="text-center font-bold text-2xl md:text-3xl text-yellow-500 dark:text-yellow-400 tracking-wider ">
                   <h1>Checkout Summary</h1>
                 </div>
                 <div className="p-4">

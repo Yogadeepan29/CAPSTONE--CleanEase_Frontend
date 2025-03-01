@@ -173,12 +173,11 @@ const CheckoutAddress = () => {
     Object.keys(selectedAddressIds).length === checkoutData.items.length &&
     Object.values(selectedAddressIds).every((id) => id !== undefined);
 
-  console.log("Checkout Data:", checkoutData);
   return (
     <>
       <section className=" mx-auto container min-h-screen antialiased dark:bg-gray-900 ">
         <div className="mx-auto top-20 max-w-screen-xl p-4 2xl:px-0 mt-10 sm:mt-5">
-          <h2 className="text-3xl md:text-5xl text-center font-semibold text-gray-900 dark:text-white ">
+          <h2 className="text-3xl md:text-5xl text-center font-semibold text-blue-600 dark:text-blue-500 ">
             Checkout{" "}
           </h2>
           <div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
@@ -208,7 +207,7 @@ const CheckoutAddress = () => {
               </Breadcrumb>
               {currentuser.rest && currentuser.rest.addresses.length > 0 ? (
                 <Card className="mt-4 border border-gray-700 bg-gray-50 dark:border-gray-400 dark:bg-gray-800">
-                  <div className="text-center font-bold text-2xl md:text-3xl ">
+                  <div className="text-center font-bold text-2xl md:text-3xl text-green-500 dark:text-green-400">
                     <h1>Service Address</h1>
                   </div>
                   {checkoutData.items.length > 1 && (

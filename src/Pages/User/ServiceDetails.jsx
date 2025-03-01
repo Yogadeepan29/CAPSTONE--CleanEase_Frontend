@@ -213,11 +213,11 @@ const ServiceDetails = () => {
                 <img className="w-full rounded-3xl " src={product.productImg} />
 
                 <div className="details mt-8 grid justify-center items-center text-center lg:justify-start">
-                  <h1 className="text-2xl font-semibold text-gray-900 sm:text-3xl dark:text-white ">
+                  <h1 className="text-2xl  font-semibold sm:text-3xl text-green-600 dark:text-green-500 tracking-wide">
                     {product.name}
                   </h1>
                   <div className="flex items-center gap-2 mt-4 ">
-                    <span className="text-lg font-bold text-gray-900 dark:text-white">
+                    <span className="text-lg font-bold text-blue-600 dark:text-blue-500 ">
                       Start's at{" "}
                     </span>
                     <span className="text-2xl font-extrabold text-gray-900 dark:text-white">
@@ -297,8 +297,8 @@ const ServiceDetails = () => {
               <div className="mt-6 sm:mt-8 lg:mt-0 ">
                 {product.addons && product.addons.length > 0 ? (
                   <section className="additional-services ">
-                    <div className="border rounded-3xl p-8 max-w-md lg:max-w-lg mx-auto ">
-                      <h2 className="text-xl sm:text-2xl mb-5 font-bold text-center">
+                    <div className="border rounded-3xl p-8 max-w-md lg:max-w-lg mx-auto bg-slate-100 dark:bg-gray-800 ">
+                      <h2 className="text-xl sm:text-2xl mb-5 font-bold text-center text-green-600 dark:text-green-500 tracking-wide ">
                         Additional services
                       </h2>
                       <div className="addons">
@@ -316,7 +316,7 @@ const ServiceDetails = () => {
                                 />
                                 <Label
                                   htmlFor={`addon-${index}`}
-                                  className=" text-sm sm:text-lg font-medium cursor-pointer text-gray-900 dark:text-white"
+                                  className=" text-sm sm:text-lg font-medium cursor-pointer text-blue-700 dark:text-blue-400"
                                 >
                                   {addon.name}
                                 </Label>
@@ -337,14 +337,14 @@ const ServiceDetails = () => {
 
                 <HR />
                 <section className="description mt-6">
-                  <h2 className="text-3xl mb-5 font-bold">
+                  <h2 className="text-3xl mb-5 font-bold text-blue-600 dark:text-blue-500 tracking-wider ">
                     Product Description
                   </h2>
                   <p className="text-sm sm:text-lg ">{product.description}</p>
                 </section>
 
                 <section className="features mt-6">
-                  <h2 className="text-3xl mb-5 font-bold">Features</h2>
+                  <h2 className="text-3xl mb-5 font-bold text-blue-600 dark:text-blue-500 tracking-wider ">Features</h2>
 
                   <ul className="grid grid-cols-12 gap-2">
                     {product.features.map((feature, index) => (
@@ -353,7 +353,7 @@ const ServiceDetails = () => {
                         className="flex items-center col-span-12 md:col-span-6 lg:col-span-12 "
                       >
                         <div className="flex items-center gap-2">
-                          <FaArrowRight className="text-lg" />
+                          <FaArrowRight className="text-lg text-yellow-500 dark:text-yellow-400 " />
                           <span className="text-sm sm:text-lg ps-2">
                             {feature}
                           </span>
@@ -364,7 +364,7 @@ const ServiceDetails = () => {
                 </section>
 
                 <section className="service-details mt-10">
-                  <h2 className="text-3xl mb-5 font-bold">Service Details</h2>
+                  <h2 className="text-3xl mb-5 font-bold text-blue-600 dark:text-blue-500 tracking-wider ">Service Details</h2>
                   <div className="grid grid-cols-3 max-w-md gap-3 mb-2 justify-center mx-auto p-2 text-sm sm:text-lg">
                     <div className="font-semibold ">Ideal For</div>
                     <div className="text-center">:</div>

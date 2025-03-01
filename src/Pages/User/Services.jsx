@@ -37,7 +37,6 @@ const Services = () => {
       try {
         const response = await axios.get(`${API_BASE_URL}/services`);
         setData(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error(error);
       } finally {
@@ -132,7 +131,7 @@ const Services = () => {
           ) : filteredData.length > 0 ? (
             filteredData.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-14">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold my-10">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold my-10 text-green-600 dark:text-green-500">
                   {category.category}
                 </h1>
 
@@ -140,7 +139,7 @@ const Services = () => {
                   {category.products.map((product, productIndex) => (
                     <Card
                       key={productIndex}
-                      className="max-w-sm mx-auto mb-4 hover:text-green-400 hover:scale-105 transition duration-300 ease-in-out cursor:pointer "
+                      className="max-w-sm mx-auto mb-4 hover:text-green-400 hover:scale-105 transition duration-300 ease-in-out cursor:pointer bg-slate-50 "
                       imgAlt="Services-Product Image"
                       imgSrc={
                         product.productImg
@@ -180,7 +179,7 @@ const Services = () => {
                         </Rating>
 
                         <div className="flex items-center gap-2">
-                          <span className="text-lg font-bold text-gray-900 dark:text-white">
+                          <span className="text-lg font-bold   text-blue-500 dark:text-blue-400">
                             Start's at{" "}
                           </span>
                           <span className="text-2xl font-bold text-gray-900 dark:text-white">
