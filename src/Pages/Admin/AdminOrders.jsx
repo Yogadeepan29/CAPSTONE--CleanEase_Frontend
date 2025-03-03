@@ -164,7 +164,6 @@ const AdminOrders = () => {
         </div>
         <div className="overflow-x-auto">
           <Table
-            hoverable
             className="text-center table-auto text-xs md:text-sm"
           >
             <Table.Head>
@@ -210,8 +209,8 @@ const AdminOrders = () => {
                 currentOrders.map((order, orderIndex) => {
                   const rowColor =
                     orderIndex % 2 === 0
-                      ? "bg-gray-200 dark:bg-gray-800"
-                      : "bg-gray-100 dark:bg-gray-900";
+                      ? "bg-gray-200 dark:bg-gray-900"
+                      : "bg-gray-100 dark:bg-gray-800";
                   return (
                     <React.Fragment key={order._id}>
                       <Table.Row className={rowColor}>
