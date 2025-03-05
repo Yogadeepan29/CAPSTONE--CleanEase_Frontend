@@ -83,6 +83,83 @@ npm start
 
 ---
 
+## File Structure
+
+### Frontend
+```
+CAPSTONE-CleanEase-(FRONTEND)/
+├── .env
+├── .gitignore
+├── dist/
+├── eslint.config.js
+├── index.html
+├── netlify.toml
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public/
+├── README.md
+├── src/
+│   ├── apiConfig.js
+│   ├── App.css
+│   ├── App.jsx
+│   ├── Components/
+│   │   ├── AddServiceModal.jsx
+│   │   ├── AdminLayout.jsx
+│   │   ├── AdminSidebar.jsx
+│   │   ├── CustomerReviews.jsx
+│   │   ├── DashboardAddress.jsx
+│   │   ├── DashboardProfile.jsx
+│   │   ├── DashboardSidebar.jsx
+│   │   ├── EditServiceModal.jsx
+│   │   ├── Filter.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   ├── OAuth.jsx
+│   │   ├── OnlyAdminPrivateRoute.jsx
+│   │   ├── PrivateRoute.jsx
+│   │   ├── ThemeProvider.jsx
+│   ├── firebase.js
+│   ├── index.css
+│   ├── main.jsx
+│   ├── Pages/
+│   │   ├── Admin/
+│   │   │   ├── AdminDashboard.jsx
+│   │   │   ├── AdminOrders.jsx
+│   │   │   ├── AdminReviews.jsx
+│   │   │   ├── AdminServices.jsx
+│   │   │   ├── AdminTransaction.jsx
+│   │   │   ├── AdminUsers.jsx
+│   │   ├── Common/
+│   │   │   ├── PageNotFound.jsx
+│   │   ├── User/
+│   │   │   ├── Cancel.jsx
+│   │   │   ├── Cart.jsx
+│   │   │   ├── CheckoutAddress.jsx
+│   │   │   ├── CheckoutSlot.jsx
+│   │   │   ├── CheckoutSummary.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Order.jsx
+│   │   │   ├── ServiceDetails.jsx
+│   │   │   ├── Services.jsx
+│   │   │   ├── Signin.jsx
+│   │   │   ├── Signup.jsx
+│   │   │   ├── Success.jsx
+│   │   │   ├── UserDashboard.jsx
+│   ├── Redux/
+│   │   ├── Slice/
+│   │   │   ├── cartSlice.jsx
+│   │   │   ├── orderSlice.jsx
+│   │   │   ├── servicesSlice.jsx
+│   │   │   ├── themeSlice.jsx
+│   │   │   ├── userSlice.jsx
+│   │   ├── Store.jsx
+├── tailwind.config.js
+├── vite.config.js
+```
+
+
+
 ## 🏷️ Deployment
 - **Frontend:** Deployed on Netlify → [Live Demo](https://ryd-cleanease.netlify.app/)
 - **Backend:** Deployed on Render → [API](https://capstone-cleanease-backend.onrender.com)
