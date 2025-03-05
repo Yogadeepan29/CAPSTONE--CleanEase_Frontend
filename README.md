@@ -38,7 +38,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
    <td>
     <figure>
       <a href="public/screenshots/User/google-signin.png">
-        <img src="public/screenshots/User/google-signin.png" width="200px">
+        <img src="public/screenshots/User/google-signin.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Google Sign In</b></p>
@@ -47,7 +47,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/user-profile.png">
-        <img src="public/screenshots/User/user-profile.png" width="200px">
+        <img src="public/screenshots/User/user-profile.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>User Profile</b></p>
@@ -56,7 +56,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/user-address.png">
-        <img src="public/screenshots/User/user-address.png" width="200px">
+        <img src="public/screenshots/User/user-address.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>User Address</b></p>
@@ -67,7 +67,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
      <td>
     <figure>
       <a href="public/screenshots/User/services.png">
-        <img src="public/screenshots/User/services.png" width="200px" height="200px">
+        <img src="public/screenshots/User/services.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Services Page</b></p>
@@ -76,7 +76,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/service-details.png">
-        <img src="public/screenshots/User/service-details.png" width="200px" height="200px">
+        <img src="public/screenshots/User/service-details.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Service Details</b></p>
@@ -85,7 +85,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/cart.png">
-        <img src="public/screenshots/User/cart.png" width="200px" height="200px">
+        <img src="public/screenshots/User/cart.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Cart Page</b></p>
@@ -96,7 +96,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
    <td>
     <figure>
       <a href="public/screenshots/User/checkout-address.png">
-        <img src="public/screenshots/User/checkout-address.png" width="200px">
+        <img src="public/screenshots/User/checkout-address.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Checkout Address</b></p>
@@ -105,7 +105,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/checkout-slot.png">
-        <img src="public/screenshots/User/checkout-slot.png" width="200px">
+        <img src="public/screenshots/User/checkout-slot.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Checkout Slot</b></p>
@@ -114,7 +114,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/checkout-summary.png">
-        <img src="public/screenshots/User/checkout-summary.png" width="200px">
+        <img src="public/screenshots/User/checkout-summary.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Checkout Summary</b></p>
@@ -125,7 +125,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/payment.png">
-        <img src="public/screenshots/User/payment.png" width="200px">
+        <img src="public/screenshots/User/payment.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Payment</b></p>
@@ -134,7 +134,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/payment-success.png">
-        <img src="public/screenshots/User/payment-success.png" width="200px">
+        <img src="public/screenshots/User/payment-success.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Payment Success</b></p>
@@ -143,7 +143,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/payment-failed.png">
-        <img src="public/screenshots/User/payment-failed.png" width="200px">
+        <img src="public/screenshots/User/payment-failed.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Payment Failed</b></p>
@@ -154,7 +154,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
      <td>
     <figure>
       <a href="public/screenshots/User/orders.png">
-        <img src="public/screenshots/User/orders.png" width="200px">
+        <img src="public/screenshots/User/orders.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Orders</b></p>
@@ -172,7 +172,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
     <td>
     <figure>
       <a href="public/screenshots/page-not-found.png">
-        <img src="public/screenshots/page-not-found.png" width="200px">
+        <img src="public/screenshots/page-not-found.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Page Not Found</b></p>
@@ -190,7 +190,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
  <td>
     <figure>
       <a href="public/screenshots/Admin/admin-dashboard.png">
-        <img src="public/screenshots/Admin/admin-dashboard.png" width="200px">
+        <img src="public/screenshots/Admin/admin-dashboard.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Admin Dashboard</b></p>
@@ -199,7 +199,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/Admin/admin-users.png">
-        <img src="public/screenshots/Admin/admin-users.png" width="200px">
+        <img src="public/screenshots/Admin/admin-users.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Admin Users</b></p>
@@ -208,7 +208,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/Admin/admin-transactions.png">
-        <img src="public/screenshots/Admin/admin-transactions.png" width="200px">
+        <img src="public/screenshots/Admin/admin-transactions.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Admin Transactions</b></p>
@@ -219,7 +219,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
  <td>
     <figure>
       <a href="public/screenshots/Admin/admin-orders.png">
-        <img src="public/screenshots/Admin/admin-orders.png" width="200px">
+        <img src="public/screenshots/Admin/admin-orders.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Admin Orders</b></p>
@@ -228,7 +228,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/Admin/admin-reviews.png">
-        <img src="public/screenshots/Admin/admin-reviews.png" width="200px">
+        <img src="public/screenshots/Admin/admin-reviews.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Admin Reviews</b></p>
@@ -237,7 +237,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/Admin/admin-services.png">
-        <img src="public/screenshots/Admin/admin-services.png" width="200px">
+        <img src="public/screenshots/Admin/admin-services.png" width="250px" height="250px" style="object-fit: none;">
       </a>
       <br>
       <p align="center"><b>Admin Services</b></p>
