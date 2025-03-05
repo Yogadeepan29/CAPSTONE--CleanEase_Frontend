@@ -14,21 +14,21 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <tr>
 <td>
     <figure>
-      <img src="public/screenshots/User/home.png" width="200px" height="300px" style="object-fit: cover;>
+      <img src="public/screenshots/User/home.png" width="200px" height="300px" style="object-fit: cover;">
       <br>
       <p align="center"><b>Home Page</b></p>
     </figure>
   </td>
   <td>
     <figure>
-      <img src="public/screenshots/User/signin.png" width="200px" height="300px" style="object-fit: cover;>
+      <img src="public/screenshots/User/signin.png" width="200px" height="300px" style="object-fit: cover;">
       <br>
       <p align="center"><b>Sign In</b></p>
     </figure>
   </td>
   <td>
     <figure>
-      <img src="public/screenshots/User/signup.png" width="200px" height="300px" style="object-fit: cover;>
+      <img src="public/screenshots/User/signup.png" width="200px" height="300px" style="object-fit: cover;">
       <br>
       <p align="center"><b>Sign Up</b></p>
     </figure>
