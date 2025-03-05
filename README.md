@@ -431,7 +431,7 @@ CAPSTONE-CleanEase-(FRONTEND)/
   - Email: `test1@test.com`
   - Password: `qwerty`
 
-  - **Admin Login**
+- **Admin Login**
   - Email: `admin@admin.com`
   - Password: `qwerty@123`
 
