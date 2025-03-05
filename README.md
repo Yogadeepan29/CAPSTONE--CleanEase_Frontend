@@ -110,22 +110,10 @@ CAPSTONE-CleanEase-(FRONTEND)/
 ├── 📂 public/
 ├── 📖 README.md
 ├── 📂 src/
-```
-
-<details>
-  <summary>🔧 src/</summary>
-
-```
 │   ├── 🔧 apiConfig.js
 │   ├── 🎨 App.css
 │   ├── ⚛️ App.jsx
 │   ├── 📁 Components/
-```
-
-<details>
-  <summary>📁 Components/</summary>
-
-```
 │   │   ├── 🏗️ AddServiceModal.jsx
 │   │   ├── 🖥️ AdminLayout.jsx
 │   │   ├── 📊 AdminSidebar.jsx
@@ -141,77 +129,45 @@ CAPSTONE-CleanEase-(FRONTEND)/
 │   │   ├── 🔒 OnlyAdminPrivateRoute.jsx
 │   │   ├── 🔒 PrivateRoute.jsx
 │   │   ├── 🎨 ThemeProvider.jsx
-```
-
-</details>
-
-```
 │   ├── 🔥 firebase.js
 │   ├── 🎨 index.css
 │   ├── ⚛️ main.jsx
 │   ├── 📁 Pages/
-```
-
-<details>
-  <summary>📁 Pages/</summary>
-
-```
 │   │   ├── 🛠️ Admin/
-```
-
-<details>
-  <summary>🛠️ Admin/</summary>
-
-```
 │   │   │   ├── 📊 AdminDashboard.jsx
 │   │   │   ├── 📋 AdminOrders.jsx
 │   │   │   ├── ⭐ AdminReviews.jsx
 │   │   │   ├── 🛠️ AdminServices.jsx
 │   │   │   ├── 💰 AdminTransaction.jsx
 │   │   │   ├── 👥 AdminUsers.jsx
-```
-</details>
-
-```
 │   │   ├── 🚧 Common/
-```
-
-<details>
-  <summary>🚧 Common/</summary>
-
-```
 │   │   │   ├── ⚠️ PageNotFound.jsx
-```
-</details>
-
-</details>
-
-```
+│   │   ├── 👤 User/
+│   │   │   ├── ❌ Cancel.jsx
+│   │   │   ├── 🛒 Cart.jsx
+│   │   │   ├── 📦 CheckoutAddress.jsx
+│   │   │   ├── ⏳ CheckoutSlot.jsx
+│   │   │   ├── 📜 CheckoutSummary.jsx
+│   │   │   ├── 🏠 Home.jsx
+│   │   │   ├── 📦 Order.jsx
+│   │   │   ├── 🧼 ServiceDetails.jsx
+│   │   │   ├── 🛠️ Services.jsx
+│   │   │   ├── 🔑 Signin.jsx
+│   │   │   ├── 🆕 Signup.jsx
+│   │   │   ├── ✅ Success.jsx
+│   │   │   ├── 🏠 UserDashboard.jsx
 │   ├── 🎯 Redux/
-```
-
-<details>
-  <summary>🎯 Redux/</summary>
-
-```
 │   │   ├── ⚡ Slice/
-```
-
-<details>
-  <summary>⚡ Slice/</summary>
-
-```
 │   │   │   ├── 🛒 cartSlice.jsx
 │   │   │   ├── 📦 orderSlice.jsx
 │   │   │   ├── 🛠️ servicesSlice.jsx
 │   │   │   ├── 🎨 themeSlice.jsx
 │   │   │   ├── 👤 userSlice.jsx
+│   │   ├── 🗄️ Store.jsx
+├── 🎨 tailwind.config.js
+├── ⚡ vite.config.js
+
 ```
-</details>
-
-</details>
-
----
 
 ## 🏷️ Deployment
 
