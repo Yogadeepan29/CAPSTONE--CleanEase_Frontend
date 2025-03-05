@@ -6,99 +6,40 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 ## 📸 Screenshots
 
-<style>
-  .screenshot-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-  }
-  .screenshot-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  .screenshot-grid img:hover {
-    transform: scale(1.05);
-  }
-</style>
+### **👤 User Pages**
 
-### 👤 User Pages
+| Home | Sign In | Sign Up |
+|------|--------|--------|
+| ![Home](public/screenshots/User/home.png) | ![Sign In](public/screenshots/User/signin.png) | ![Sign Up](public/screenshots/User/signup.png) |
 
-<div class="screenshot-grid">
-  <a href="public/screenshots/User/home.png" target="_blank">
-    <img src="public/screenshots/User/home.png" alt="Home Page">
-  </a>
-  <a href="public/screenshots/User/signin.png" target="_blank">
-    <img src="public/screenshots/User/signin.png" alt="Sign In">
-  </a>
-  <a href="public/screenshots/User/signup.png" target="_blank">
-    <img src="public/screenshots/User/signup.png" alt="Sign Up">
-  </a>
-  <a href="public/screenshots/User/google-signin.png" target="_blank">
-    <img src="public/screenshots/User/google-signin.png" alt="Sign Up with Google">
-  </a>
-  <a href="public/screenshots/User/user-profile.png" target="_blank">
-    <img src="public/screenshots/User/user-profile.png" alt="User Profile">
-  </a>
-  <a href="public/screenshots/User/user-address.png" target="_blank">
-    <img src="public/screenshots/User/user-address.png" alt="User Address">
-  </a>
-  <a href="public/screenshots/User/services.png" target="_blank">
-    <img src="public/screenshots/User/services.png" alt="Services Listing">
-  </a>
-  <a href="public/screenshots/User/service-details.png" target="_blank">
-    <img src="public/screenshots/User/service-details.png" alt="Service Details">
-  </a>
-  <a href="public/screenshots/User/cart.png" target="_blank">
-    <img src="public/screenshots/User/cart.png" alt="Cart">
-  </a>
-  <a href="public/screenshots/User/checkout-address.png" target="_blank">
-    <img src="public/screenshots/User/checkout-address.png" alt="Checkout Address">
-  </a>
-  <a href="public/screenshots/User/checkout-slot.png" target="_blank">
-    <img src="public/screenshots/User/checkout-slot.png" alt="Checkout Slot">
-  </a>
-  <a href="public/screenshots/User/checkout-summary.png" target="_blank">
-    <img src="public/screenshots/User/checkout-summary.png" alt="Checkout Summary">
-  </a>
-</div>
+| Google Sign In | User Profile | User Address |
+|---------------|-------------|--------------|
+| ![Google Sign In](public/screenshots/User/google-signin.png) | ![User Profile](public/screenshots/User/user-profile.png) | ![User Address](public/screenshots/User/user-address.png) |
+
+| Services | Service Details | Cart |
+|----------|----------------|------|
+| ![Services](public/screenshots/User/services.png) | ![Service Details](public/screenshots/User/service-details.png) | ![Cart](public/screenshots/User/cart.png) |
+
+| Checkout Address | Checkout Slot | Checkout Summary |
+|-----------------|--------------|------------------|
+| ![Checkout Address](public/screenshots/User/checkout-address.png) | ![Checkout Slot](public/screenshots/User/checkout-slot.png) | ![Checkout Summary](public/screenshots/User/checkout-summary.png) |
 
 ---
 
-### 🚧 Error Page
-
-<div class="screenshot-grid">
-  <a href="public/screenshots/page-not-found.png" target="_blank">
-    <img src="public/screenshots/page-not-found.png" alt="404 Page Not Found">
-  </a>
-</div>
+### **🚧 Error Page**
+![404 Page Not Found](public/screenshots/page-not-found.png)
 
 ---
 
-### 🛠 Admin Panel
+### **🛠 Admin Panel**
 
-<div class="screenshot-grid">
-  <a href="public/screenshots/Admin/admin-dashboard.png" target="_blank">
-    <img src="public/screenshots/Admin/admin-dashboard.png" alt="Admin Dashboard">
-  </a>
-  <a href="public/screenshots/Admin/admin-orders.png" target="_blank">
-    <img src="public/screenshots/Admin/admin-orders.png" alt="Admin Orders">
-  </a>
-  <a href="public/screenshots/Admin/admin-reviews.png" target="_blank">
-    <img src="public/screenshots/Admin/admin-reviews.png" alt="Admin Reviews">
-  </a>
-  <a href="public/screenshots/Admin/admin-services.png" target="_blank">
-    <img src="public/screenshots/Admin/admin-services.png" alt="Admin Services">
-  </a>
-  <a href="public/screenshots/Admin/admin-transactions.png" target="_blank">
-    <img src="public/screenshots/Admin/admin-transactions.png" alt="Admin Transactions">
-  </a>
-  <a href="public/screenshots/Admin/admin-users.png" target="_blank">
-    <img src="public/screenshots/Admin/admin-users.png" alt="Admin Users">
-  </a>
-</div>
+| Dashboard | Orders | Reviews |
+|-----------|--------|---------|
+| ![Admin Dashboard](public/screenshots/Admin/admin-dashboard.png) | ![Admin Orders](public/screenshots/Admin/admin-orders.png) | ![Admin Reviews](public/screenshots/Admin/admin-reviews.png) |
+
+| Services | Transactions | Users |
+|----------|-------------|-------|
+| ![Admin Services](public/screenshots/Admin/admin-services.png) | ![Admin Transactions](public/screenshots/Admin/admin-transactions.png) | ![Admin Users](public/screenshots/Admin/admin-users.png) |
 
 ---
 
