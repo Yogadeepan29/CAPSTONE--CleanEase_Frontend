@@ -36,9 +36,33 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   </td>
   </tr>
   <tr>
-    <td><a href="public/screenshots/User/google-signin.png"><img src="public/screenshots/User/google-signin.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/user-profile.png"><img src="public/screenshots/User/user-profile.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/user-address.png"><img src="public/screenshots/User/user-address.png" width="200px"></a></td>
+   <td>
+    <figure>
+      <a href="public/screenshots/User/google-signin.png">
+        <img src="public/screenshots/User/google-signin.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Google Sign In</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/User/user-profile.png">
+        <img src="public/screenshots/User/user-profile.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>User Profile</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/User/user-address.png">
+        <img src="public/screenshots/User/user-address.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>User Address</b></p>
+    </figure>
+  </td>
   </tr>
   <tr>
     <td><a href="public/screenshots/User/services.png"><img src="public/screenshots/User/services.png" width="200px"></a></td>
