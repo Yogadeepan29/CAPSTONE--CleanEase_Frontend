@@ -1,5 +1,5 @@
 # <h1 align="center">
-  <img src="/public/dust.png" alt="Logo" width="40" height="40" style="vertical-align: middle;"/>
+  <img src="/public/dust.png" alt="Logo" width="10" height="10" style="vertical-align: middle;"/>
   CleanEase - Frontend
 </h1>
 
