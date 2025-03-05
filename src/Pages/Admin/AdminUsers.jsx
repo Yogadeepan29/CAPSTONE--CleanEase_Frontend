@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, TextInput, Modal, Button, Breadcrumb } from "flowbite-react";
+import { Table, TextInput, Modal, Button, Breadcrumb, Spinner } from "flowbite-react";
 import axios from "axios";
 import { FaTrash } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -83,8 +83,19 @@ const AdminUsers = () => {
     }
   };
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div className="text-red-500">{error}</div>;
+   if (loading) {
+     return (
+       <div className="flex flex-col justify-center items-center">
+         <Spinner size="xl" aria-label="Loading..." />
+         <p className="mt-4 text-lg">Please wait...</p>
+       </div>
+     );
+   }
+   
+   if (error)
+     return (
+       <div className="text-red-500 text-center font-semibold">{error}</div>
+     );
 
   return (
     <>

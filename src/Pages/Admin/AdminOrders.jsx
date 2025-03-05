@@ -6,9 +6,10 @@ import {
   Checkbox,
   Label,
   Button,
+  Spinner,
 } from "flowbite-react";
 import axios from "axios";
-import { FaSort, FaSortUp, FaSortDown } from "react-icons/fa";
+import { FaSortUp, FaSortDown } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import API_BASE_URL from "../../apiConfig";
 
@@ -105,7 +106,15 @@ const AdminOrders = () => {
     }
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="flex flex-col justify-center items-center ">
+        <Spinner size="xl" aria-label="Loading..." />
+        <p className="mt-4 text-lg">Please wait...</p>
+      </div>
+    );
+  }
+  
   if (error)
     return (
       <div className="text-red-500 text-center font-semibold">{error}</div>
