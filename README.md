@@ -4,6 +4,91 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 ---
 
+## 📸 Screenshots
+
+
+### 👤 User Pages
+
+#### 🏠 Home Page  
+![Home Page](public/screenshots/User/home.png)
+
+#### 🔑 Sign In  
+![Sign In](public/screenshots/User/signin.png)
+
+#### 🆕 Sign Up  
+![Sign Up](public/screenshots/User/signup.png)
+
+#### 🆕 Sign Up with Google 
+![Sign Up with Google](public/screenshots/User/google-signin.png)
+
+#### 👤 Dashboard Profile  
+![Dashboard Profile](public/screenshots/User/user-profile.png)
+
+#### 🏠 Dashboard Address  
+![Dashboard Address](public/screenshots/User/user-address.png)
+
+#### 🛠 Services Listing  
+![Services Listing](public/screenshots/User/services.png)
+
+#### 🧼 Service Details  
+![Service Details](public/screenshots/User/service-details.png)
+
+#### 🛒 Cart  
+![Cart](public/screenshots/User/cart.png)
+
+#### 📦 Checkout Address  
+![Checkout Address](public/screenshots/User/checkout-address.png)
+
+#### ⏳ Checkout Slot  
+![Checkout Slot](public/screenshots/User/checkout-slot.png)
+
+#### 📜 Checkout Summary  
+![Checkout Summary](public/screenshots/User/checkout-summary.png)
+
+#### 💵 Payment Gateway
+![Payment Gateway](public/screenshots/User/payment.png)
+
+#### ✅ Payment Success  
+![Payment Success](public/screenshots/User/payment-success.png)
+
+#### ❌ Payment Cancel  
+![Payment Cancel](public/screenshots/User/payment-failed.png)
+
+#### 📦 Orders  
+![Orders](public/screenshots/User/orders.png)
+
+
+---
+
+### 🚧 Error Page
+
+#### ⚠️ 404 - Page Not Found  
+![Page Not Found](public/screenshots/page-not-found.png)
+
+---
+
+### 🛠 Admin Panel
+
+#### 📊 Admin Dashboard  
+![Admin Dashboard](public/screenshots/Admin/admin-dashboard.png)
+
+#### 📋 Admin Orders  
+![Admin Orders](public/screenshots/Admin/admin-orders.png)
+
+#### ⭐ Admin Reviews  
+![Admin Reviews](public/screenshots/Admin/admin-reviews.png)
+
+#### 🛠 Admin Services  
+![Admin Services](public/screenshots/Admin/admin-services.png)
+
+#### 💰 Admin Transactions  
+![Admin Transactions](public/screenshots/Admin/admin-transactions.png)
+
+#### 👥 Admin Users  
+![Admin Users](public/screenshots/Admin/admin-users.png)
+
+---
+
 ## 🔍 Features
 
 ### 🎨 Frontend Features
@@ -173,6 +258,26 @@ CAPSTONE-CleanEase-(FRONTEND)/
 
 - **Frontend:** Deployed on Netlify → [Live Demo](https://ryd-cleanease.netlify.app/)
 - **Backend:** Deployed on Render → [API](https://capstone-cleanease-backend.onrender.com)
+
+---
+
+## 🧪 Testing Information
+
+### 🎭 Demo User Credentials
+- **Admin Login**
+  - Email: `admin@admin.com`
+  - Password: `qwerty@123`
+
+- **User Login**
+  - Email: `test1@test.com`
+  - Password: `qwerty`
+
+### 💳 Stripe Test Card Details
+Use the following test card details for payment:
+- **Card Number**: `4242 4242 4242 4242`
+- **Expiry Date**: `12/34`
+- **CVC**: `123`
+- **ZIP Code**: Any 5-digit number
 
 ---
 
