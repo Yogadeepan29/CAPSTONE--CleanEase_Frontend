@@ -1,4 +1,7 @@
-# <h1 align='center'>![Logo](/public/dust.png) CleanEase - Frontend </h1>
+# <h1 align="center">
+  <img src="/public/dust.png" alt="Logo" width="40" height="40" style="vertical-align: middle;"/>
+  CleanEase - Frontend
+</h1>
 
 CleanEase is a full-stack web application designed to streamline and enhance the booking of cleaning services. It provides an intuitive and responsive interface for users to explore, filter, and schedule cleaning services based on their preferences. The platform also includes secure payment processing, user authentication, and role-based access control.
 
