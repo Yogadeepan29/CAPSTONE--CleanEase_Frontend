@@ -8,56 +8,19 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 ### **👤 User Pages**
 
-<table>
-  <tr>
-    <th>Home</th>
-    <th>Sign In</th>
-    <th>Sign Up</th>
-  </tr>
-  <tr>
-    <td><a href="public/screenshots/User/home.png"><img src="public/screenshots/User/home.png" width="200"></a></td>
-    <td><a href="public/screenshots/User/signin.png"><img src="public/screenshots/User/signin.png" width="200"></a></td>
-    <td><a href="public/screenshots/User/signup.png"><img src="public/screenshots/User/signup.png" width="200"></a></td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <th>Google Sign In</th>
-    <th>User Profile</th>
-    <th>User Address</th>
-  </tr>
-  <tr>
-    <td><a href="public/screenshots/User/google-signin.png"><img src="public/screenshots/User/google-signin.png" width="200"></a></td>
-    <td><a href="public/screenshots/User/user-profile.png"><img src="public/screenshots/User/user-profile.png" width="200"></a></td>
-    <td><a href="public/screenshots/User/user-address.png"><img src="public/screenshots/User/user-address.png" width="200"></a></td>
-  </tr>
-</table>
+<details> <summary>👤 <b>User Pages</b> (Click to Expand)</summary> <table> <tr> <th>Home</th> <th>Sign In</th> <th>Sign Up</th> </tr> <tr> <td><a href="public/screenshots/User/home.png"><img src="public/screenshots/User/home.png" width="200"></a></td> <td><a href="public/screenshots/User/signin.png"><img src="public/screenshots/User/signin.png" width="200"></a></td> <td><a href="public/screenshots/User/signup.png"><img src="public/screenshots/User/signup.png" width="200"></a></td> </tr> </table> <table> <tr> <th>Google Sign In</th> <th>User Profile</th> <th>User Address</th> </tr> <tr> <td><a href="public/screenshots/User/google-signin.png"><img src="public/screenshots/User/google-signin.png" width="200"></a></td> <td><a href="public/screenshots/User/user-profile.png"><img src="public/screenshots/User/user-profile.png" width="200"></a></td> <td><a href="public/screenshots/User/user-address.png"><img src="public/screenshots/User/user-address.png" width="200"></a></td> </tr> </table> <table> <tr> <th>My Orders</th> <th>Order Details</th> <th>Wishlist</th> </tr> <tr> <td><a href="public/screenshots/User/my-orders.png"><img src="public/screenshots/User/my-orders.png" width="200"></a></td> <td><a href="public/screenshots/User/order-details.png"><img src="public/screenshots/User/order-details.png" width="200"></a></td> <td><a href="public/screenshots/User/wishlist.png"><img src="public/screenshots/User/wishlist.png" width="200"></a></td> </tr> </table> </details>
 
 ---
 
 ### **🚧 Error Page**
-<a href="public/screenshots/page-not-found.png">
-  <img src="public/screenshots/page-not-found.png" width="300">
-</a>
+
+<details> <summary>📋 <b>Common Pages</b> (Click to Expand)</summary> <table> <tr> <th>About Us</th> <th>Contact Us</th> <th>Terms & Conditions</th> </tr> <tr> <td><a href="public/screenshots/Common/about-us.png"><img src="public/screenshots/Common/about-us.png" width="200"></a></td> <td><a href="public/screenshots/Common/contact-us.png"><img src="public/screenshots/Common/contact-us.png" width="200"></a></td> <td><a href="public/screenshots/Common/terms-conditions.png"><img src="public/screenshots/Common/terms-conditions.png" width="200"></a></td> </tr> </table> <table> <tr> <th>Privacy Policy</th> <th>FAQ</th> <th>Page Not Found</th> </tr> <tr> <td><a href="public/screenshots/Common/privacy-policy.png"><img src="public/screenshots/Common/privacy-policy.png" width="200"></a></td> <td><a href="public/screenshots/Common/faq.png"><img src="public/screenshots/Common/faq.png" width="200"></a></td> <td><a href="public/screenshots/Common/page-not-found.png"><img src="public/screenshots/Common/page-not-found.png" width="200"></a></td> </tr> </table> </details>
 
 ---
 
 ### **🛠 Admin Panel**
 
-<table>
-  <tr>
-    <th>Dashboard</th>
-    <th>Orders</th>
-    <th>Reviews</th>
-  </tr>
-  <tr>
-    <td><a href="public/screenshots/Admin/admin-dashboard.png"><img src="public/screenshots/Admin/admin-dashboard.png" width="200"></a></td>
-    <td><a href="public/screenshots/Admin/admin-orders.png"><img src="public/screenshots/Admin/admin-orders.png" width="200"></a></td>
-    <td><a href="public/screenshots/Admin/admin-reviews.png"><img src="public/screenshots/Admin/admin-reviews.png" width="200"></a></td>
-  </tr>
-</table>
-
+<details> <summary>🛠 <b>Admin Panel</b> (Click to Expand)</summary> <table> <tr> <th>Dashboard</th> <th>Orders</th> <th>Reviews</th> </tr> <tr> <td><a href="public/screenshots/Admin/admin-dashboard.png"><img src="public/screenshots/Admin/admin-dashboard.png" width="200"></a></td> <td><a href="public/screenshots/Admin/admin-orders.png"><img src="public/screenshots/Admin/admin-orders.png" width="200"></a></td> <td><a href="public/screenshots/Admin/admin-reviews.png"><img src="public/screenshots/Admin/admin-reviews.png" width="200"></a></td> </tr> </table> <table> <tr> <th>Users</th> <th>Products</th> <th>Settings</th> </tr> <tr> <td><a href="public/screenshots/Admin/admin-users.png"><img src="public/screenshots/Admin/admin-users.png" width="200"></a></td> <td><a href="public/screenshots/Admin/admin-products.png"><img src="public/screenshots/Admin/admin-products.png" width="200"></a></td> <td><a href="public/screenshots/Admin/admin-settings.png"><img src="public/screenshots/Admin/admin-settings.png" width="200"></a></td> </tr> </table> </details>
 
 ---
 
@@ -238,15 +201,18 @@ CAPSTONE-CleanEase-(FRONTEND)/
 ### 🎭 Demo User Credentials
 
 - **User Login**
+
   - Email: `test1@test.com`
   - Password: `qwerty`
 
 - **Admin Login**
   - Email: `admin@admin.com`
-  - Password: `qwerty@123`  
+  - Password: `qwerty@123`
 
 ### 💳 Stripe Test Card Details
+
 Use the following test card details for payment:
+
 - **Card Number**: `4242 4242 4242 4242`
 - **Expiry Date**: `12/34`
 - **CVC**: `123`
