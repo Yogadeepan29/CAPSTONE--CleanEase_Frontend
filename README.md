@@ -67,7 +67,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
      <td>
     <figure>
       <a href="public/screenshots/User/services.png">
-        <img src="public/screenshots/User/services.png" width="200px">
+        <img src="public/screenshots/User/services.png" width="200px" height="200px">
       </a>
       <br>
       <p align="center"><b>Services Page</b></p>
@@ -76,7 +76,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/service-details.png">
-        <img src="public/screenshots/User/service-details.png" width="200px">
+        <img src="public/screenshots/User/service-details.png" width="200px" height="200px">
       </a>
       <br>
       <p align="center"><b>Service Details</b></p>
@@ -85,7 +85,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <td>
     <figure>
       <a href="public/screenshots/User/cart.png">
-        <img src="public/screenshots/User/cart.png" width="200px">
+        <img src="public/screenshots/User/cart.png" width="200px" height="200px">
       </a>
       <br>
       <p align="center"><b>Cart Page</b></p>
@@ -169,7 +169,15 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <div align='center'>
 <table>
   <tr>
-    <td><a href="public/screenshots/page-not-found.png"><img src="public/screenshots/page-not-found.png" width="200px"></a></td>
+    <td>
+    <figure>
+      <a href="public/screenshots/page-not-found.png">
+        <img src="public/screenshots/page-not-found.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Page Not Found</b></p>
+    </figure>
+  </td>
   </tr>
 </table>
 </div>
@@ -179,14 +187,62 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   <div align='center'>
 <table>
   <tr>
-    <td><a href="public/screenshots/Admin/admin-dashboard.png"><img src="public/screenshots/Admin/admin-dashboard.png" width="200px"></a></td>
-      <td><a href="public/screenshots/Admin/admin-users.png"><img src="public/screenshots/Admin/admin-users.png" width="200px"></a></td>
-          <td><a href="public/screenshots/Admin/admin-transactions.png"><img src="public/screenshots/Admin/admin-transactions.png" width="200px"></a></td>
+ <td>
+    <figure>
+      <a href="public/screenshots/Admin/admin-dashboard.png">
+        <img src="public/screenshots/Admin/admin-dashboard.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Admin Dashboard</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/Admin/admin-users.png">
+        <img src="public/screenshots/Admin/admin-users.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Admin Users</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/Admin/admin-transactions.png">
+        <img src="public/screenshots/Admin/admin-transactions.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Admin Transactions</b></p>
+    </figure>
+  </td>
   </tr>
   <tr>
-    <td><a href="public/screenshots/Admin/admin-orders.png"><img src="public/screenshots/Admin/admin-orders.png" width="200px"></a></td>
-    <td><a href="public/screenshots/Admin/admin-reviews.png"><img src="public/screenshots/Admin/admin-reviews.png" width="200px"></a></td>
-    <td><a href="public/screenshots/Admin/admin-services.png"><img src="public/screenshots/Admin/admin-services.png" width="200px"></a></td>
+ <td>
+    <figure>
+      <a href="public/screenshots/Admin/admin-orders.png">
+        <img src="public/screenshots/Admin/admin-orders.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Admin Orders</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/Admin/admin-reviews.png">
+        <img src="public/screenshots/Admin/admin-reviews.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Admin Reviews</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/Admin/admin-services.png">
+        <img src="public/screenshots/Admin/admin-services.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Admin Services</b></p>
+    </figure>
+  </td>
   </tr>
  
 </table>
