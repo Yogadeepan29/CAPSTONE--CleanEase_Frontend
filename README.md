@@ -4,7 +4,6 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 ---
 
-
 ## 📸 Screenshots
 
 ### 👤 User Pages
@@ -65,22 +64,102 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   </td>
   </tr>
   <tr>
-    <td><a href="public/screenshots/User/services.png"><img src="public/screenshots/User/services.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/service-details.png"><img src="public/screenshots/User/service-details.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/cart.png"><img src="public/screenshots/User/cart.png" width="200px"></a></td>
+     <td>
+    <figure>
+      <a href="public/screenshots/User/services.png">
+        <img src="public/screenshots/User/services.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Services Page</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/User/service-details.png">
+        <img src="public/screenshots/User/service-details.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Service Details</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/User/cart.png">
+        <img src="public/screenshots/User/cart.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Cart Page</b></p>
+    </figure>
+  </td>
   </tr>
   <tr>
-    <td><a href="public/screenshots/User/checkout-address.png"><img src="public/screenshots/User/checkout-address.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/checkout-slot.png"><img src="public/screenshots/User/checkout-slot.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/checkout-summary.png"><img src="public/screenshots/User/checkout-summary.png" width="200px"></a></td>
+   <td>
+    <figure>
+      <a href="public/screenshots/User/checkout-address.png">
+        <img src="public/screenshots/User/checkout-address.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Checkout Address</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/User/checkout-slot.png">
+        <img src="public/screenshots/User/checkout-slot.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Checkout Slot</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/User/checkout-summary.png">
+        <img src="public/screenshots/User/checkout-summary.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Checkout Summary</b></p>
+    </figure>
+  </td>
   </tr>
   <tr>
-    <td><a href="public/screenshots/User/payment.png"><img src="public/screenshots/User/payment.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/payment-success.png"><img src="public/screenshots/User/payment-success.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/payment-failed.png"><img src="public/screenshots/User/payment-failed.png" width="200px"></a></td>
+  <td>
+    <figure>
+      <a href="public/screenshots/User/payment.png">
+        <img src="public/screenshots/User/payment.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Payment</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/User/payment-success.png">
+        <img src="public/screenshots/User/payment-success.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Payment Success</b></p>
+    </figure>
+  </td>
+  <td>
+    <figure>
+      <a href="public/screenshots/User/payment-failed.png">
+        <img src="public/screenshots/User/payment-failed.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Payment Failed</b></p>
+    </figure>
+  </td>
   </tr>
   <tr>
-    <td><a href="public/screenshots/User/orders.png"><img src="public/screenshots/User/orders.png" width="200px"></a></td>
+     <td>
+    <figure>
+      <a href="public/screenshots/User/orders.png">
+        <img src="public/screenshots/User/orders.png" width="200px">
+      </a>
+      <br>
+      <p align="center"><b>Orders</b></p>
+    </figure>
+  </td>
   </tr>
   </table>
   </div>
