@@ -92,39 +92,122 @@ npm start
 
 ---
 
-## 📂 File Structure
+## File Structure
 
 ### Frontend
 
+```
+CAPSTONE-CleanEase-(FRONTEND)/
+├── 📜 .env
+├── 🚫 .gitignore
+├── 📂 dist/
+├── ⚙️ eslint.config.js
+├── 📝 index.html
+├── 🌍 netlify.toml
+├── 📜 package-lock.json
+├── 📜 package.json
+├── 🎨 postcss.config.js
+├── 📂 public/
+├── 📖 README.md
+├── 📂 src/
+```
+
 <details>
-  <summary>Click to expand</summary>
-  
-  ```
-  CAPSTONE-CleanEase-(FRONTEND)/
-  ├── 📜 .env
-  ├── 🚫 .gitignore
-  ├── 📂 dist/
-  ├── ⚙️ eslint.config.js
-  ├── 📝 index.html
-  ├── 🌍 netlify.toml
-  ├── 📜 package-lock.json
-  ├── 📜 package.json
-  ├── 🎨 postcss.config.js
-  ├── 📂 public/
-  ├── 📖 README.md
-  ├── 📂 src/
-  │   ├── 🔧 apiConfig.js
-  │   ├── 🎨 App.css
-  │   ├── ⚛️ App.jsx
-  │   ├── 📁 Components/
-  │   ├── 📁 Pages/
-  │   ├── 🎯 Redux/
-  │   ├── 🔥 firebase.js
-  │   ├── 🎨 index.css
-  │   ├── ⚛️ main.jsx
-  ├── 🎨 tailwind.config.js
-  ├── ⚡ vite.config.js
-  ```
+  <summary>🔧 src/</summary>
+
+```
+│   ├── 🔧 apiConfig.js
+│   ├── 🎨 App.css
+│   ├── ⚛️ App.jsx
+│   ├── 📁 Components/
+```
+
+<details>
+  <summary>📁 Components/</summary>
+
+```
+│   │   ├── 🏗️ AddServiceModal.jsx
+│   │   ├── 🖥️ AdminLayout.jsx
+│   │   ├── 📊 AdminSidebar.jsx
+│   │   ├── ⭐ CustomerReviews.jsx
+│   │   ├── 🏠 DashboardAddress.jsx
+│   │   ├── 👤 DashboardProfile.jsx
+│   │   ├── 📊 DashboardSidebar.jsx
+│   │   ├── ✏️ EditServiceModal.jsx
+│   │   ├── 🔍 Filter.jsx
+│   │   ├── 🚀 Footer.jsx
+│   │   ├── 🏠 Header.jsx
+│   │   ├── 🔑 OAuth.jsx
+│   │   ├── 🔒 OnlyAdminPrivateRoute.jsx
+│   │   ├── 🔒 PrivateRoute.jsx
+│   │   ├── 🎨 ThemeProvider.jsx
+```
+
+</details>
+
+```
+│   ├── 🔥 firebase.js
+│   ├── 🎨 index.css
+│   ├── ⚛️ main.jsx
+│   ├── 📁 Pages/
+```
+
+<details>
+  <summary>📁 Pages/</summary>
+
+```
+│   │   ├── 🛠️ Admin/
+```
+
+<details>
+  <summary>🛠️ Admin/</summary>
+
+```
+│   │   │   ├── 📊 AdminDashboard.jsx
+│   │   │   ├── 📋 AdminOrders.jsx
+│   │   │   ├── ⭐ AdminReviews.jsx
+│   │   │   ├── 🛠️ AdminServices.jsx
+│   │   │   ├── 💰 AdminTransaction.jsx
+│   │   │   ├── 👥 AdminUsers.jsx
+```
+</details>
+
+```
+│   │   ├── 🚧 Common/
+```
+
+<details>
+  <summary>🚧 Common/</summary>
+
+```
+│   │   │   ├── ⚠️ PageNotFound.jsx
+```
+</details>
+
+</details>
+
+```
+│   ├── 🎯 Redux/
+```
+
+<details>
+  <summary>🎯 Redux/</summary>
+
+```
+│   │   ├── ⚡ Slice/
+```
+
+<details>
+  <summary>⚡ Slice/</summary>
+
+```
+│   │   │   ├── 🛒 cartSlice.jsx
+│   │   │   ├── 📦 orderSlice.jsx
+│   │   │   ├── 🛠️ servicesSlice.jsx
+│   │   │   ├── 🎨 themeSlice.jsx
+│   │   │   ├── 👤 userSlice.jsx
+```
+</details>
 
 </details>
 
@@ -142,4 +225,3 @@ npm start
 **YOGADEEPAN.R**
 
 ---
-
