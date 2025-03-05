@@ -6,86 +6,99 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 ## 📸 Screenshots
 
+<style>
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  .screenshot-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .screenshot-grid img:hover {
+    transform: scale(1.05);
+  }
+</style>
 
 ### 👤 User Pages
 
-#### 🏠 Home Page  
-![Home Page](public/screenshots/User/home.png)
-
-#### 🔑 Sign In  
-![Sign In](public/screenshots/User/signin.png)
-
-#### 🆕 Sign Up  
-![Sign Up](public/screenshots/User/signup.png)
-
-#### 🆕 Sign Up with Google 
-![Sign Up with Google](public/screenshots/User/google-signin.png)
-
-#### 👤 Dashboard Profile  
-![Dashboard Profile](public/screenshots/User/user-profile.png)
-
-#### 🏠 Dashboard Address  
-![Dashboard Address](public/screenshots/User/user-address.png)
-
-#### 🛠 Services Listing  
-![Services Listing](public/screenshots/User/services.png)
-
-#### 🧼 Service Details  
-![Service Details](public/screenshots/User/service-details.png)
-
-#### 🛒 Cart  
-![Cart](public/screenshots/User/cart.png)
-
-#### 📦 Checkout Address  
-![Checkout Address](public/screenshots/User/checkout-address.png)
-
-#### ⏳ Checkout Slot  
-![Checkout Slot](public/screenshots/User/checkout-slot.png)
-
-#### 📜 Checkout Summary  
-![Checkout Summary](public/screenshots/User/checkout-summary.png)
-
-#### 💵 Payment Gateway
-![Payment Gateway](public/screenshots/User/payment.png)
-
-#### ✅ Payment Success  
-![Payment Success](public/screenshots/User/payment-success.png)
-
-#### ❌ Payment Cancel  
-![Payment Cancel](public/screenshots/User/payment-failed.png)
-
-#### 📦 Orders  
-![Orders](public/screenshots/User/orders.png)
-
+<div class="screenshot-grid">
+  <a href="public/screenshots/User/home.png" target="_blank">
+    <img src="public/screenshots/User/home.png" alt="Home Page">
+  </a>
+  <a href="public/screenshots/User/signin.png" target="_blank">
+    <img src="public/screenshots/User/signin.png" alt="Sign In">
+  </a>
+  <a href="public/screenshots/User/signup.png" target="_blank">
+    <img src="public/screenshots/User/signup.png" alt="Sign Up">
+  </a>
+  <a href="public/screenshots/User/google-signin.png" target="_blank">
+    <img src="public/screenshots/User/google-signin.png" alt="Sign Up with Google">
+  </a>
+  <a href="public/screenshots/User/user-profile.png" target="_blank">
+    <img src="public/screenshots/User/user-profile.png" alt="User Profile">
+  </a>
+  <a href="public/screenshots/User/user-address.png" target="_blank">
+    <img src="public/screenshots/User/user-address.png" alt="User Address">
+  </a>
+  <a href="public/screenshots/User/services.png" target="_blank">
+    <img src="public/screenshots/User/services.png" alt="Services Listing">
+  </a>
+  <a href="public/screenshots/User/service-details.png" target="_blank">
+    <img src="public/screenshots/User/service-details.png" alt="Service Details">
+  </a>
+  <a href="public/screenshots/User/cart.png" target="_blank">
+    <img src="public/screenshots/User/cart.png" alt="Cart">
+  </a>
+  <a href="public/screenshots/User/checkout-address.png" target="_blank">
+    <img src="public/screenshots/User/checkout-address.png" alt="Checkout Address">
+  </a>
+  <a href="public/screenshots/User/checkout-slot.png" target="_blank">
+    <img src="public/screenshots/User/checkout-slot.png" alt="Checkout Slot">
+  </a>
+  <a href="public/screenshots/User/checkout-summary.png" target="_blank">
+    <img src="public/screenshots/User/checkout-summary.png" alt="Checkout Summary">
+  </a>
+</div>
 
 ---
 
 ### 🚧 Error Page
 
-#### ⚠️ 404 - Page Not Found  
-![Page Not Found](public/screenshots/page-not-found.png)
+<div class="screenshot-grid">
+  <a href="public/screenshots/page-not-found.png" target="_blank">
+    <img src="public/screenshots/page-not-found.png" alt="404 Page Not Found">
+  </a>
+</div>
 
 ---
 
 ### 🛠 Admin Panel
 
-#### 📊 Admin Dashboard  
-![Admin Dashboard](public/screenshots/Admin/admin-dashboard.png)
-
-#### 📋 Admin Orders  
-![Admin Orders](public/screenshots/Admin/admin-orders.png)
-
-#### ⭐ Admin Reviews  
-![Admin Reviews](public/screenshots/Admin/admin-reviews.png)
-
-#### 🛠 Admin Services  
-![Admin Services](public/screenshots/Admin/admin-services.png)
-
-#### 💰 Admin Transactions  
-![Admin Transactions](public/screenshots/Admin/admin-transactions.png)
-
-#### 👥 Admin Users  
-![Admin Users](public/screenshots/Admin/admin-users.png)
+<div class="screenshot-grid">
+  <a href="public/screenshots/Admin/admin-dashboard.png" target="_blank">
+    <img src="public/screenshots/Admin/admin-dashboard.png" alt="Admin Dashboard">
+  </a>
+  <a href="public/screenshots/Admin/admin-orders.png" target="_blank">
+    <img src="public/screenshots/Admin/admin-orders.png" alt="Admin Orders">
+  </a>
+  <a href="public/screenshots/Admin/admin-reviews.png" target="_blank">
+    <img src="public/screenshots/Admin/admin-reviews.png" alt="Admin Reviews">
+  </a>
+  <a href="public/screenshots/Admin/admin-services.png" target="_blank">
+    <img src="public/screenshots/Admin/admin-services.png" alt="Admin Services">
+  </a>
+  <a href="public/screenshots/Admin/admin-transactions.png" target="_blank">
+    <img src="public/screenshots/Admin/admin-transactions.png" alt="Admin Transactions">
+  </a>
+  <a href="public/screenshots/Admin/admin-users.png" target="_blank">
+    <img src="public/screenshots/Admin/admin-users.png" alt="Admin Users">
+  </a>
+</div>
 
 ---
 
@@ -264,13 +277,14 @@ CAPSTONE-CleanEase-(FRONTEND)/
 ## 🧪 Testing Information
 
 ### 🎭 Demo User Credentials
-- **Admin Login**
-  - Email: `admin@admin.com`
-  - Password: `qwerty@123`
 
 - **User Login**
   - Email: `test1@test.com`
   - Password: `qwerty`
+
+- **Admin Login**
+  - Email: `admin@admin.com`
+  - Password: `qwerty@123`  
 
 ### 💳 Stripe Test Card Details
 Use the following test card details for payment:
