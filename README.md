@@ -4,7 +4,6 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 ---
 
-## 📸 Screenshots
 
 ## 📸 Screenshots
 
@@ -14,9 +13,24 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 <table>
   <tr>
-    <td><a href="public/screenshots/User/home.png"><img src="public/screenshots/User/home.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/signin.png"><img src="public/screenshots/User/signin.png" width="200px"></a></td>
-    <td><a href="public/screenshots/User/signup.png"><img src="public/screenshots/User/signup.png" width="200px"></a></td>
+  <td>
+      <figure>
+        <img src="public/screenshots/User/home.png" width="200px" height="150px" style="object-fit: cover;">
+        <figcaption align="center">Home Page</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src="public/screenshots/User/signin.png" width="200px" height="150px" style="object-fit: cover;">
+        <figcaption align="center">Sign In</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src="public/screenshots/User/signup.png" width="200px" height="150px" style="object-fit: cover;">
+        <figcaption align="center">Sign Up</figcaption>
+      </figure>
+    </td>
   </tr>
   <tr>
     <td><a href="public/screenshots/User/google-signin.png"><img src="public/screenshots/User/google-signin.png" width="200px"></a></td>
