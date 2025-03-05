@@ -4,6 +4,54 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 ---
 
+## 🔍 Features
+
+### 🎨 Frontend Features
+
+- ✨ **User Authentication**: Login and registration using Firebase authentication.
+- 🔄 **Dynamic UI**: Built with React for an interactive experience.
+- ⚙️ **Filtering & Search**: Find services by availability, timing, and budget.
+- 🏠 **Personalized Checklists**: Users can create and manage their own cleaning checklists.
+- ⏳ **Booking System**: One-time and recurring appointments.
+- 💳 **Secure Payments**: Integrated with Stripe for seamless transactions.
+- 📲 **Reminders & Notifications**: Dashboard popups for upcoming appointments.
+- 🌟 **Reviews & Ratings**: Users can leave feedback on services.
+
+### 🛠️ Backend Features
+
+- 🛠 **RESTful API**: Built with Node.js and Express.js.
+- 📚 **Database Management**: MongoDB for storing user data, services, and orders.
+- 🔒 **Security**: JWT authentication & Bcrypt password hashing.
+- 🔐 **Role-Based Access**: Admin and user access control.
+- ✅ **Order Management**: Admins can view, manage, and update service bookings.
+
+---
+
+## 🌐 Technologies Used
+
+### 💻 Frontend
+
+- ✨ **React.js**
+- 👉 Redux Toolkit (State Management)
+- 🔍 React Router Dom (Client-side Routing)
+- 🎨 Flowbite React (UI Components)
+- 🖌️ Tailwind CSS (Styling)
+- 📜 Formik & Yup (Form Validation)
+- 💳 Stripe API (Payment Processing)
+- 🛠 Firebase (User Authentication)
+- 🎉 React Toastify (Notifications)
+
+### 🚀 Backend
+
+- 🌟 Node.js
+- 🛠 Express.js
+- 📚 MongoDB (Mongoose ODM)
+- 🔐 JSON Web Token (JWT) Authentication
+- 🔑 Bcrypt (Password Hashing)
+- 💳 Stripe (Payment Integration)
+
+---
+
 ## 📸 Screenshots
 
 ### 👤 User Pages
@@ -67,7 +115,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
      <td>
     <figure>
       <a href="public/screenshots/User/services.png">
-        <img src="public/screenshots/User/services.png" width="250px" height="250px" style="object-fit: cover;">
+        <img src="public/screenshots/User/services.png" width="250px" height="250px" style="object-fit:none;">
       </a>
       <br>
       <p align="center"><b>Services Page</b></p>
@@ -247,54 +295,6 @@ CleanEase is a full-stack web application designed to streamline and enhance the
  
 </table>
 </div>
-
----
-
-## 🔍 Features
-
-### 🎨 Frontend Features
-
-- ✨ **User Authentication**: Login and registration using Firebase authentication.
-- 🔄 **Dynamic UI**: Built with React for an interactive experience.
-- ⚙️ **Filtering & Search**: Find services by availability, timing, and budget.
-- 🏠 **Personalized Checklists**: Users can create and manage their own cleaning checklists.
-- ⏳ **Booking System**: One-time and recurring appointments.
-- 💳 **Secure Payments**: Integrated with Stripe for seamless transactions.
-- 📲 **Reminders & Notifications**: Dashboard popups for upcoming appointments.
-- 🌟 **Reviews & Ratings**: Users can leave feedback on services.
-
-### 🛠️ Backend Features
-
-- 🛠 **RESTful API**: Built with Node.js and Express.js.
-- 📚 **Database Management**: MongoDB for storing user data, services, and orders.
-- 🔒 **Security**: JWT authentication & Bcrypt password hashing.
-- 🔐 **Role-Based Access**: Admin and user access control.
-- ✅ **Order Management**: Admins can view, manage, and update service bookings.
-
----
-
-## 🌐 Technologies Used
-
-### 💻 Frontend
-
-- ✨ **React.js**
-- 👉 Redux Toolkit (State Management)
-- 🔍 React Router Dom (Client-side Routing)
-- 🎨 Flowbite React (UI Components)
-- 🖌️ Tailwind CSS (Styling)
-- 📜 Formik & Yup (Form Validation)
-- 💳 Stripe API (Payment Processing)
-- 🛠 Firebase (User Authentication)
-- 🎉 React Toastify (Notifications)
-
-### 🚀 Backend
-
-- 🌟 Node.js
-- 🛠 Express.js
-- 📚 MongoDB (Mongoose ODM)
-- 🔐 JSON Web Token (JWT) Authentication
-- 🔑 Bcrypt (Password Hashing)
-- 💳 Stripe (Payment Integration)
 
 ---
 
