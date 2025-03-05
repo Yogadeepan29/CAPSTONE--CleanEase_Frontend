@@ -1,7 +1,4 @@
-# <p align="center">
-  <img src="/public/dust.png" alt="Logo" width="40" height="40" style="vertical-align: middle; margin-right: 10px;">
-  <span style="font-size: 32px; font-weight: bold;">CleanEase - Frontend</span>
-</p>
+# <h1 align='center'> CleanEase - Frontend </h1>
 
 CleanEase is a full-stack web application designed to streamline and enhance the booking of cleaning services. It provides an intuitive and responsive interface for users to explore, filter, and schedule cleaning services based on their preferences. The platform also includes secure payment processing, user authentication, and role-based access control.
 
@@ -97,10 +94,4 @@ npm start
 
 ---
 
-## ⚖️ License
-This project is licensed under the **MIT License**.
-
----
-
-_Enhance your cleaning service experience with **CleanEase!**_ 🏢🌟
 
