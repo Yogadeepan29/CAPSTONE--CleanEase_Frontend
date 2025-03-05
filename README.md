@@ -6,12 +6,11 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 ## 📸 Screenshots
 
-
 ## 📸 Screenshots
 
 ### 👤 User Pages
 
-<div align="center">
+<div align='center'>
 
 <table>
   <tr>
@@ -41,20 +40,36 @@ CleanEase is a full-stack web application designed to streamline and enhance the
   </tr>
   <tr>
     <td><a href="public/screenshots/User/orders.png"><img src="public/screenshots/User/orders.png" width="200px"></a></td>
+  </tr>
+  </table>
+  </div>
+
+### 🚧 Error Page
+
+  <div align='center'>
+<table>
+  <tr>
     <td><a href="public/screenshots/page-not-found.png"><img src="public/screenshots/page-not-found.png" width="200px"></a></td>
+  </tr>
+</table>
+</div>
+
+### 🛠 Admin Panel
+
+  <div align='center'>
+<table>
+  <tr>
     <td><a href="public/screenshots/Admin/admin-dashboard.png"><img src="public/screenshots/Admin/admin-dashboard.png" width="200px"></a></td>
+      <td><a href="public/screenshots/Admin/admin-users.png"><img src="public/screenshots/Admin/admin-users.png" width="200px"></a></td>
+          <td><a href="public/screenshots/Admin/admin-transactions.png"><img src="public/screenshots/Admin/admin-transactions.png" width="200px"></a></td>
   </tr>
   <tr>
     <td><a href="public/screenshots/Admin/admin-orders.png"><img src="public/screenshots/Admin/admin-orders.png" width="200px"></a></td>
     <td><a href="public/screenshots/Admin/admin-reviews.png"><img src="public/screenshots/Admin/admin-reviews.png" width="200px"></a></td>
     <td><a href="public/screenshots/Admin/admin-services.png"><img src="public/screenshots/Admin/admin-services.png" width="200px"></a></td>
   </tr>
-  <tr>
-    <td><a href="public/screenshots/Admin/admin-transactions.png"><img src="public/screenshots/Admin/admin-transactions.png" width="200px"></a></td>
-    <td><a href="public/screenshots/Admin/admin-users.png"><img src="public/screenshots/Admin/admin-users.png" width="200px"></a></td>
-  </tr>
+ 
 </table>
-
 </div>
 
 ---
@@ -236,6 +251,7 @@ CAPSTONE-CleanEase-(FRONTEND)/
 ### 🎭 Demo User Credentials
 
 - **User Login**
+
   - Email: `test1@test.com`
   - Password: `qwerty`
 
@@ -244,7 +260,9 @@ CAPSTONE-CleanEase-(FRONTEND)/
   - Password: `qwerty@123`
 
 ### 💳 Stripe Test Card Details
+
 Use the following test card details for payment:
+
 - **Card Number**: `4242 4242 4242 4242`
 - **Expiry Date**: `12/34`
 - **CVC**: `123`
