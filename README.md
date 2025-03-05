@@ -8,38 +8,56 @@ CleanEase is a full-stack web application designed to streamline and enhance the
 
 ### **👤 User Pages**
 
-| Home | Sign In | Sign Up |
-|------|--------|--------|
-| ![Home](public/screenshots/User/home.png) | ![Sign In](public/screenshots/User/signin.png) | ![Sign Up](public/screenshots/User/signup.png) |
+<table>
+  <tr>
+    <th>Home</th>
+    <th>Sign In</th>
+    <th>Sign Up</th>
+  </tr>
+  <tr>
+    <td><a href="public/screenshots/User/home.png"><img src="public/screenshots/User/home.png" width="200"></a></td>
+    <td><a href="public/screenshots/User/signin.png"><img src="public/screenshots/User/signin.png" width="200"></a></td>
+    <td><a href="public/screenshots/User/signup.png"><img src="public/screenshots/User/signup.png" width="200"></a></td>
+  </tr>
+</table>
 
-| Google Sign In | User Profile | User Address |
-|---------------|-------------|--------------|
-| ![Google Sign In](public/screenshots/User/google-signin.png) | ![User Profile](public/screenshots/User/user-profile.png) | ![User Address](public/screenshots/User/user-address.png) |
-
-| Services | Service Details | Cart |
-|----------|----------------|------|
-| ![Services](public/screenshots/User/services.png) | ![Service Details](public/screenshots/User/service-details.png) | ![Cart](public/screenshots/User/cart.png) |
-
-| Checkout Address | Checkout Slot | Checkout Summary |
-|-----------------|--------------|------------------|
-| ![Checkout Address](public/screenshots/User/checkout-address.png) | ![Checkout Slot](public/screenshots/User/checkout-slot.png) | ![Checkout Summary](public/screenshots/User/checkout-summary.png) |
+<table>
+  <tr>
+    <th>Google Sign In</th>
+    <th>User Profile</th>
+    <th>User Address</th>
+  </tr>
+  <tr>
+    <td><a href="public/screenshots/User/google-signin.png"><img src="public/screenshots/User/google-signin.png" width="200"></a></td>
+    <td><a href="public/screenshots/User/user-profile.png"><img src="public/screenshots/User/user-profile.png" width="200"></a></td>
+    <td><a href="public/screenshots/User/user-address.png"><img src="public/screenshots/User/user-address.png" width="200"></a></td>
+  </tr>
+</table>
 
 ---
 
 ### **🚧 Error Page**
-![404 Page Not Found](public/screenshots/page-not-found.png)
+<a href="public/screenshots/page-not-found.png">
+  <img src="public/screenshots/page-not-found.png" width="300">
+</a>
 
 ---
 
 ### **🛠 Admin Panel**
 
-| Dashboard | Orders | Reviews |
-|-----------|--------|---------|
-| ![Admin Dashboard](public/screenshots/Admin/admin-dashboard.png) | ![Admin Orders](public/screenshots/Admin/admin-orders.png) | ![Admin Reviews](public/screenshots/Admin/admin-reviews.png) |
+<table>
+  <tr>
+    <th>Dashboard</th>
+    <th>Orders</th>
+    <th>Reviews</th>
+  </tr>
+  <tr>
+    <td><a href="public/screenshots/Admin/admin-dashboard.png"><img src="public/screenshots/Admin/admin-dashboard.png" width="200"></a></td>
+    <td><a href="public/screenshots/Admin/admin-orders.png"><img src="public/screenshots/Admin/admin-orders.png" width="200"></a></td>
+    <td><a href="public/screenshots/Admin/admin-reviews.png"><img src="public/screenshots/Admin/admin-reviews.png" width="200"></a></td>
+  </tr>
+</table>
 
-| Services | Transactions | Users |
-|----------|-------------|-------|
-| ![Admin Services](public/screenshots/Admin/admin-services.png) | ![Admin Transactions](public/screenshots/Admin/admin-transactions.png) | ![Admin Users](public/screenshots/Admin/admin-users.png) |
 
 ---
 
