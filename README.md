@@ -67,7 +67,7 @@ CleanEase is a full-stack web application designed to streamline and enhance the
      <td>
     <figure>
       <a href="public/screenshots/User/services.png">
-        <img src="public/screenshots/User/services.png" width="250px" height="250px" style="object-fit: scale-down;">
+        <img src="public/screenshots/User/services.png" width="250px" height="250px" style="object-fit: cover;">
       </a>
       <br>
       <p align="center"><b>Services Page</b></p>
