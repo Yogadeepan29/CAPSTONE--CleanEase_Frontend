@@ -422,6 +422,12 @@ CAPSTONE-CleanEase-(FRONTEND)/
 
 ---
 
+## 📜 API Documentation
+
+For detailed API documentation, please visit the following link: [API Documentation](https://documenter.getpostman.com/view/35158032/2sAYdoG8Kq)
+
+---
+
 ## 🧪 Testing Information
 
 ### 🎭 Demo User Credentials
