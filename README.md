@@ -434,8 +434,8 @@ For detailed API documentation, please visit the following link: [API Documentat
 
 - **User Login**
 
-  - Email: `test1@test.com`
-  - Password: `qwerty`
+  - Email: `demo@gmail.com`
+  - Password: `demo@123`
 
 - **Admin Login**
   - Email: `admin@admin.com`
