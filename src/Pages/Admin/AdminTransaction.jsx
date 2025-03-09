@@ -229,7 +229,7 @@ const AdminTransaction = () => {
                   <Table.Row key={order._id}>
                     <Table.Cell>{index + 1}</Table.Cell>
                     <Table.Cell>{order.username}</Table.Cell>
-                    <Table.Cell>{new Date(order.createdAt).toLocaleDateString()}</Table.Cell>
+                    <Table.Cell>{new Date(order.createdAt).toLocaleDateString("en-GB")}</Table.Cell>
                     <Table.Cell>{order.transactionId || "N/A"}</Table.Cell>
                     <Table.Cell>{order.paymentMode}</Table.Cell>
                     <Table.Cell>

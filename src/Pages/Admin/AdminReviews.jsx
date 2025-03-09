@@ -302,7 +302,7 @@ const AdminReviews = () => {
                       </Rating>
                     </Table.Cell>
                     <Table.Cell>
-                      {new Date(review.createdAt).toLocaleDateString()} {/* Display only the date */}
+                    {new Date(review.createdAt).toLocaleDateString("en-GB")} {/* Display only the date */}
                     </Table.Cell>
                     <Table.Cell className="text-start">
                       {review.feedback}
