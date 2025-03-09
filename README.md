@@ -437,7 +437,7 @@ For detailed API documentation, please visit the following link: [API Documentat
   - Email: `test1@test.com`
   - Password: `qwerty`
 
-  - **Admin Login**
+- **Admin Login**
   - Email: `admin@admin.com`
   - Password: `qwerty@123`
 
